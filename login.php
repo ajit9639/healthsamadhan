@@ -91,6 +91,9 @@ echo "<script>alert('Invalid Login')</script>";
                         <div class="col-md-2 mt-3">
                             <a href="register.php" class="btn btn-success">Register</a>
                         </div>
+                        <div class="col-md-3 mt-3">
+                            <a href="all_doctors_login.php" class="btn btn-danger">Doctor's Login</a>
+                        </div>
 
                     </div>
                 </form>
