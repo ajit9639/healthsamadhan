@@ -47106,7 +47106,7 @@ select:not(.ignore) {
 }
 .header {
     position: relative;
-    background-color: #ffffff
+    background-color: #edf1fc;
 }
 .header ul {
     list-style: none;

@@ -1,3 +1,18 @@
+<?php
+if(!isset($_SESSION['email'])){
+    echo "<script>
+    location.href = 'login.php';
+    </script>";
+}else{
+    // $s =  $_SESSION['email'];
+    // $s1 = mysqli_query($conn , "SELECT * FROM `signup` WHERE `email` = $s");
+    // $getme = mysqli_fetch_assoc($s1);
+    // $getme_name = $getme['first_name'];
+}
+
+
+?>
+
 <div class="header">
     <div class="container-fluid theme-container">
         <div class="top-header">
@@ -9,10 +24,10 @@
                 </div>
                 <div class="col">
                     <div class="header-search">
-                        <form action="#">
+                        <!-- <form action="#">
                             <input class="form-control custom-search"
                                 placeholder="Search for Medicines and Health Products" type="text">
-                        </form>
+                        </form> -->
                     </div>
                 </div>
                 <div class="col-auto">
@@ -25,7 +40,7 @@
                                 <div class="list-icon">
                                     <i class="ti-user"></i>
 
-                                    <?php echo $_SESSION['email']; ?>
+                                    <?php echo 'Hello,'.' '. $_SESSION['my_nm']; ?>
                                     <span><i class="fa fa-angle-down drop-icon"></i></span>
                                 </div>
                             </button>
@@ -73,13 +88,13 @@
                         </li>
 
 
-                        <li>
+                        <!-- <li>
                             <a href="upload-prescription.html" class="btn btn-primary btn-sm">Upload</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
         </div>
-        
+
     </div>
 </div>

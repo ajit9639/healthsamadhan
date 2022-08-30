@@ -5,7 +5,15 @@
     /* height: 100vh; */
     }
 </style>
-<?php 
+
+<?php
+// if(!isset($_SESSION['email'])){
+//     echo "<script>
+//     location.href = 'login.php';
+//     </script>";
+// }
+
+
 include 'conn.php';
 include 'head.php' ;
 

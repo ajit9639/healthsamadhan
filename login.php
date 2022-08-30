@@ -41,8 +41,12 @@ if(isset($_POST['submit'])){
   $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email' AND `phone_number`='$number'"));
 if($check == '1'){
 
+    $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email'"));
+    $getnm_my = $getnm['first_name'];
+
   $_SESSION['value'] = '1';
   $_SESSION['email'] = $email;
+  $_SESSION['my_nm'] = $getnm_my;
 
   echo "<script>window.location.replace('index.php')</script>";
 }else{
@@ -68,7 +72,6 @@ echo "<script>alert('Invalid Login')</script>";
 
     <body>
 
-
         <section class="main-section">
             <div class="container">
                 <form method="POST">
@@ -84,7 +87,7 @@ echo "<script>alert('Invalid Login')</script>";
                             <label for="pwd">Phone Number:</label>
                             <input type="number" class="form-control" placeholder="Enter Number" name="phone">
                         </div>
-
+                        
                         <div class="col-md-2 mt-3">
                             <button type="submit" class="btn btn-info" name="submit">Login</button>
                         </div>
