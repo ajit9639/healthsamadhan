@@ -91,6 +91,7 @@ if(!isset($_SESSION['email'])){
                         <!-- <li>
                             <a href="upload-prescription.html" class="btn btn-primary btn-sm">Upload</a>
                         </li> -->
+                        
                     </ul>
                 </div>
             </div>
