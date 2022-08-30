@@ -1,0 +1,26 @@
+.btn:focus {
+    outline: 0;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%)!important;
+}
+
+.header .top-header .header-right-options li button .list-icon{
+    font-weight: 500!important;
+}
+
+.header .top-header .header-right-options li .btn .list-icon span .fa{
+    padding:0px!important;
+    color:#000!important;
+}
+
+
+@media (min-width: 576px){
+.modal-dialog {
+    max-width: 700px!important;
+    margin: 1.75rem auto;
+}
+}
+
+.modal-content .modal-body .form-header{
+    font-family: "Nunito", sans-serif!important;
+}
