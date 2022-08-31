@@ -1,29 +1,25 @@
 <?php include 'conn.php'; ?>
 
 <!doctype html>
-<html lang="zxx">
-
-
+<html>
 
 <?php include 'head.php' ?>
 
-
 <body>
 
-    
-<?php include 'header.php' ?>
+    <?php include 'header.php' ?>
 
-<?php include 'mobile-header.php' ?>
+    <?php include 'mobile-header.php' ?>
 
     <main>
 
-    <?php    $idd = $_GET['id']; ?>
+        <?php    $idd = $_GET['id']; ?>
 
         <section class="pt-6 pt-md-7 pb-5">
             <div class="container">
                 <div class="row justify-content-between">
                     <div class="col-md-12 order-md-2">
-                        
+
                         <div class="row">
                             <?php
                             
@@ -35,7 +31,8 @@
                             <div class="col-md-4 col-sm-6 col-6">
                                 <div class="product">
                                     <a href="product-single.php?id=<?php echo $all_rows['sno'] ?>" class="product-img">
-                                        <img src="admin/sub_categories_img/<?php echo $all_rows['sub_category_img']; ?>" class="" alt="">
+                                        <img src="admin/sub_categories_img/<?php echo $all_rows['sub_category_img']; ?>"
+                                            class="" alt="">
                                     </a>
                                     <div class="product-info">
                                         <div class="product-rating">
@@ -47,7 +44,8 @@
                                             <!--<div class="review-count">4.5 (2,213)</div>-->
                                         </div>
                                         <h3>
-                                            <a href="product-single.php?id=<?php echo $all_rows['sno'] ?>"> <?php echo $all_rows['sub_category_name']; ?></a>
+                                            <a href="product-single.php?id=<?php echo $all_rows['sno'] ?>">
+                                                <?php echo $all_rows['sub_category_name']; ?></a>
                                         </h3>
                                         <div class="product-value">
                                             <!--<div class="d-flex">-->
@@ -62,7 +60,7 @@
                             <?php }?>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </section>

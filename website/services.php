@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Insurance One</li>
                     </ul>
@@ -51,7 +51,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-drive"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="car-insurance.html">Car insurance</a></h2>
+                                <h2 class="service-one__title"><a href="car-insurance.php">Car insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-family"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="life-insurance.html">Life insurance</a></h2>
+                                <h2 class="service-one__title"><a href="life-insurance.php">Life insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-home"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="home-insurance.html">Home insurance</a></h2>
+                                <h2 class="service-one__title"><a href="home-insurance.php">Home insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-heart-beat"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="health-insurance.html">Health insurance</a></h2>
+                                <h2 class="service-one__title"><a href="health-insurance.php">Health insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-briefcase"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="business-insurance.html">Business insurance</a></h2>
+                                <h2 class="service-one__title"><a href="business-insurance.php">Business insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-fire"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="fire-insurance.html">Fire insurance</a></h2>
+                                <h2 class="service-one__title"><a href="fire-insurance.php">Fire insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-ring"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="marriage-insurance.html">Marriage insurance</a></h2>
+                                <h2 class="service-one__title"><a href="marriage-insurance.php">Marriage insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-plane"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="travel-insurance.html">Travel insurance</a></h2>
+                                <h2 class="service-one__title"><a href="travel-insurance.php">Travel insurance</a></h2>
                                 <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                             </div>
                         </div>
@@ -197,7 +197,7 @@
                                 </div>
                             </div>
                             <div class="cta-one__btn-box">
-                                <a href="contact.html" class="thm-btn cta-one__btn">Get a Quote</a>
+                                <a href="contact.php" class="thm-btn cta-one__btn">Get a Quote</a>
                             </div>
                         </div>
                         <div class="cta-one__img">

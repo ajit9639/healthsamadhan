@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <?php include 'head.php' ?>
 
 <body class="custom-cursor">
@@ -16,7 +14,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>About</li>
                     </ul>
@@ -201,7 +199,7 @@
                             </div>
                             <div class="team-one__content">
                                 <p class="team-one__sub-title">Dietician</p>
-                                <h3 class="team-one__name"><a href="team-details.html">Thomas Jakson</a></h3>
+                                <h3 class="team-one__name"><a href="team-details.php">Thomas Jakson</a></h3>
                                 <ul class="list-unstyled team-one__social-two">
                                     <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                                 </ul>
@@ -225,7 +223,7 @@
                             </div>
                             <div class="team-one__content">
                                 <p class="team-one__sub-title">Health Expert</p>
-                                <h3 class="team-one__name"><a href="team-details.html">Hallen Smith</a></h3>
+                                <h3 class="team-one__name"><a href="team-details.php">Hallen Smith</a></h3>
                                 <ul class="list-unstyled team-one__social-two">
                                     <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                                 </ul>
@@ -249,7 +247,7 @@
                             </div>
                             <div class="team-one__content">
                                 <p class="team-one__sub-title">Fitness Expert</p>
-                                <h3 class="team-one__name"><a href="team-details.html">David Cooper</a></h3>
+                                <h3 class="team-one__name"><a href="team-details.php">David Cooper</a></h3>
                                 <ul class="list-unstyled team-one__social-two">
                                     <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                                 </ul>
@@ -292,7 +290,7 @@
                                 </div>
                             </div>
                             <div class="cta-one__btn-box">
-                                <a href="contact.html" class="thm-btn cta-one__btn">Get a Quote</a>
+                                <a href="contact.php" class="thm-btn cta-one__btn">Get a Quote</a>
                             </div>
                         </div>
                         <div class="cta-one__img">
@@ -506,5 +504,5 @@
 </body>
 
 
-<!-- Mirrored from layerdrops.com/insur/main-html/about.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Jul 2022 05:20:42 GMT -->
+<!-- Mirrored from layerdrops.com/insur/main-html/about.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Jul 2022 05:20:42 GMT -->
 </html>

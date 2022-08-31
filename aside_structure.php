@@ -1,7 +1,7 @@
 <?php include 'conn.php' ?>
 
 <!doctype html>
-<html lang="zxx">
+<html>
 
 <?php include 'head.php';?>
 <link rel="stylesheet" href="./assets/css/other_page.css">

@@ -2,7 +2,6 @@
 body {
     background: url('./assets/img/bg.png') !important;
 }
-
 .main-section {
     width: 50%;
     margin: 0 auto;
@@ -10,13 +9,10 @@ body {
     background: #d5d5d5;
     padding: 20px;
 }
-
 .logo_section {
     text-align: center;
     width: 100%;
 }
-
-
 @media(max-width:576px){
     .main-section {
         width: 100%;
@@ -26,20 +22,23 @@ body {
 }
 </style>
 
-
 <body>
-
-    <?php 
+<?php 
 
 include 'conn.php'; 
 
+if(isset($_SESSION['email'])){
+    echo "<script>
+    location.href = 'index.php';
+    </script>";
+}
 
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
   $number = $_POST['phone'];
 
   $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email' AND `phone_number`='$number'"));
-if($check == '1'){
+    if($check == '1'){
 
     $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email'"));
     $getnm_my = $getnm['first_name'];
@@ -48,7 +47,7 @@ if($check == '1'){
   $_SESSION['email'] = $email;
   $_SESSION['my_nm'] = $getnm_my;
 
-  echo "<script>window.location.replace('index.php')</script>";
+echo "<script>window.location.replace('index.php')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
 }
@@ -68,6 +67,18 @@ echo "<script>alert('Invalid Login')</script>";
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+        <!-- sweet alert -->
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script type="text/javascript">
+        function JSalert() {
+            Swal.fire(
+                'Good job!',
+                'You clicked the button!',
+                'success'
+            )
+        }
+    </script>
     </head>
 
     <body>

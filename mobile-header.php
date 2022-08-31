@@ -29,21 +29,21 @@
                 <div class="welcome d-flex align-items-center">
                     <!-- <a href="#"  data-toggle="modal" data-dismiss="modal" data-target="#login_modal" class="btn btn-soft-primary btn-md">Login</a>
                     <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#register_modal" class="btn btn-primary btn-md">Register</a> -->
-                    <div class="avater btn-soft-primary">H</div>
-                    <a href="profile.php">Manish Dudhiya</a>
+                    <!-- <div class="avater btn-soft-primary"></div> -->
+                    <a href="profile.php"><?php echo 'Hello,'.' '. $_SESSION['my_nm']; ?></a>
                 </div>
                 <div class="mobileMenuLinks mb-4 mt-2">
                     <!-- <h6>Account Info</h6> -->
                     <ul>
-                        <li><a href="#">Your Last Rx</a></li>
+                        <!-- <li><a href="#">Your Last Rx</a></li> -->
                         <li><a href="my_appointment.php">My Appointment</a></li>
-                        <li><a href="#">My Subscriptions</a></li>
-                        <li><a href="#">Program Adherence</a></li>
-                        <li><a href="#">Choose Your Program</a></li>
-                        <li><a href="#">Health Partners</a></li>
-                        <li><a href="#">Payment History</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="my_subscription.php">My Subscriptions</a></li>
+                        <!-- <li><a href="#">Program Adherence</a></li> -->
+                        <!-- <li><a href="#">Choose Your Program</a></li> -->
+                        <li><a href="health_partner.php">Health Partners</a></li>
+                        <li><a href="payment_history.php">Payment History</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>
 

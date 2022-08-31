@@ -16,7 +16,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
                         <li>Pricing</li>
                     </ul>
@@ -169,7 +169,7 @@
                                                         </li>
                                                     </ul>
                                                     <div class="pricing__btn-box">
-                                                        <a href="pricing.html" class="thm-btn pricing__btn">Select Policy</a>
+                                                        <a href="pricing.php" class="thm-btn pricing__btn">Select Policy</a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -208,7 +208,7 @@
                                 </div>
                             </div>
                             <div class="cta-one__btn-box">
-                                <a href="contact.html" class="thm-btn cta-one__btn">Get a Quote</a>
+                                <a href="contact.php" class="thm-btn cta-one__btn">Get a Quote</a>
                             </div>
                         </div>
                         <div class="cta-one__img">

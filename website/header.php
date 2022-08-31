@@ -2,13 +2,10 @@
 <div class="custom-cursor__cursor-two"></div>
 
 
-
-
-
 <div class="preloader">
     <div class="preloader__image"></div>
 </div>
-<!-- /.preloader -->
+<!-- //preloader -->
 
 
 <div class="page-wrapper">
@@ -23,7 +20,7 @@
                                     <span class="icon-pin"></span>
                                 </i>
                                 <div class="text">
-                                    <p>30 Commercial Road Fratton, Australia</p>
+                                    <p>Sakchi, Jamshedpur</p>
                                 </div>
                             </li>
                             <li>
@@ -31,18 +28,18 @@
                                     <span class="icon-email"></span>
                                 </i>
                                 <div class="text">
-                                    <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                    <p><a href="mailto:needhelp@company.com">healthsamadhan@gmail.com</a></p>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="main-header__top-right">
                         <div class="main-header__top-menu-box">
-                            <ul class="list-unstyled main-header__top-menu">
+                            <!-- <ul class="list-unstyled main-header__top-menu">
                                 <li><a href="about.php">Make a Claim</a></li>
-                                <li><a href="faq.html"> FAQs</a></li>
+                                <li><a href="faq.php"> FAQs</a></li>
                                 <li><a href="about.php">About</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                         <div class="main-header__top-social-box">
                             <div class="main-header__top-social">

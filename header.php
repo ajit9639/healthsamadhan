@@ -3,13 +3,10 @@ if(!isset($_SESSION['email'])){
     echo "<script>
     location.href = 'login.php';
     </script>";
-}else{
-    // $s =  $_SESSION['email'];
-    // $s1 = mysqli_query($conn , "SELECT * FROM `signup` WHERE `email` = $s");
-    // $getme = mysqli_fetch_assoc($s1);
-    // $getme_name = $getme['first_name'];
 }
 
+// echo "<pre>";
+// print_r($_SESSION);
 
 ?>
 
@@ -53,31 +50,7 @@ if(!isset($_SESSION['email'])){
                                             Account
                                         </a>
                                     </li>
-                                    <li>
-                                        <a href="change-password.html">
-                                            Change Password
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="address.html">
-                                            Address
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="orders.html">
-                                            My Orders
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="orders-details.html">
-                                            Order Details
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">
-                                            Wish List
-                                        </a>
-                                    </li>
+                                    
                                     <li id="user_logout">
                                         <a href="logout.php">
                                             Logout

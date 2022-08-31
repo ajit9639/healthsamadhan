@@ -44,7 +44,7 @@
                                         <h2 class="main-slider__title">Samadhan<br> for the better <span>Health.</span></h2>
                                         <p class="main-slider__text">Reversal is a reality! Be open to learn the deeper causes of <br>diabetes, obesity, and related disorders.</p>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Let’s Get Started</a>
+                                            <a href="about.php" class="thm-btn main-slider__btn">Let’s Get Started</a>
                                         </div>
                                     </div>
                                 </div>
@@ -68,7 +68,7 @@
                                         <h2 class="main-slider__title">Samadhan<br> for the better <span>Health.</span></h2>
                                         <p class="main-slider__text">Reversal is a reality! Be open to learn the deeper causes of <br>diabetes, obesity, and related disorders.</p>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Let’s Get Started</a>
+                                            <a href="about.php" class="thm-btn main-slider__btn">Let’s Get Started</a>
                                         </div>
                                     </div>
                                 </div>
@@ -92,7 +92,7 @@
                                         <h2 class="main-slider__title">Samadhan<br> for the better <span>Health.</span></h2>
                                         <p class="main-slider__text">Reversal is a reality! Be open to learn the deeper causes of <br>diabetes, obesity, and related disorders.</p>
                                         <div class="main-slider__btn-box">
-                                            <a href="about.html" class="thm-btn main-slider__btn">Let’s Get Started</a>
+                                            <a href="about.php" class="thm-btn main-slider__btn">Let’s Get Started</a>
                                         </div>
                                     </div>
                                 </div>
@@ -132,7 +132,7 @@
                                     <div class="feature-one__shape">
                                         <img src="assets/images/shapes/feature-one-shape-1.png" alt="">
                                     </div>
-                                    <h3 class="feature-one__title"><a href="about.html">Quick Services</a></h3>
+                                    <h3 class="feature-one__title"><a href="about.php">Quick Services</a></h3>
                                     <p class="feature-one__text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incid idunt ut labore.</p>
                                 </div>
                             </div>
@@ -149,7 +149,7 @@
                                     <div class="feature-one__shape">
                                         <img src="assets/images/shapes/feature-one-shape-1.png" alt="">
                                     </div>
-                                    <h3 class="feature-one__title"><a href="about.html">Consult with Doctor</a></h3>
+                                    <h3 class="feature-one__title"><a href="about.php">Consult with Doctor</a></h3>
                                     <p class="feature-one__text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incid idunt ut labore.</p>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                                     <div class="feature-one__shape">
                                         <img src="assets/images/shapes/feature-one-shape-1.png" alt="">
                                     </div>
-                                    <h3 class="feature-one__title"><a href="about.html">Quick Support</a></h3>
+                                    <h3 class="feature-one__title"><a href="about.php">Quick Support</a></h3>
                                     <p class="feature-one__text">Lorem ipsum dolor amet consectetur adipiscing elit do eiusmod tempor incid idunt ut labore.</p>
                                 </div>
                             </div>
@@ -219,7 +219,7 @@
                             <p class="about-one__text-2">Nullam eu nibh vitae est tempor molestie id sed ex. Quisque dignissim maximus ipsum, sed rutrum metus tincidunt et. Sed eget tincidunt ipsum.</p>
                             <div class="about-one__btn-call">
                                 <div class="about-one__btn-box">
-                                    <a href="about.html" class="thm-btn about-one__btn">Know More</a>
+                                    <a href="about.php" class="thm-btn about-one__btn">Know More</a>
                                 </div>
                                 <div class="about-one__call">
                                     <div class="about-one__call-icon">
@@ -280,7 +280,7 @@
                                     <div class="services-one__icon">
                                     <span class="icon-family"></span>
                                     </div>
-                                    <h2 class="service-one__title"><a href="car-insurance.html">Diabtic services</a></h2>
+                                    <h2 class="service-one__title"><a href="car-insurance.php">Diabtic services</a></h2>
                                     <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                                 </div>
                             </div>
@@ -296,7 +296,7 @@
                                     <div class="services-one__icon">
                                         <span class="icon-family"></span>
                                     </div>
-                                    <h2 class="service-one__title"><a href="life-insurance.html">Fitness consultation</a></h2>
+                                    <h2 class="service-one__title"><a href="life-insurance.php">Fitness consultation</a></h2>
                                     <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                                 </div>
                             </div>
@@ -312,7 +312,7 @@
                                     <div class="services-one__icon">
                                         <span class="icon-family"></span>
                                     </div>
-                                    <h2 class="service-one__title"><a href="life-insurance.html">Fitness consultation</a></h2>
+                                    <h2 class="service-one__title"><a href="life-insurance.php">Fitness consultation</a></h2>
                                     <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                                 </div>
                             </div>
@@ -329,7 +329,7 @@
                                     <div class="services-one__icon">
                                         <span class="icon-family"></span>
                                     </div>
-                                    <h2 class="service-one__title"><a href="life-insurance.html">Fitness consultation</a></h2>
+                                    <h2 class="service-one__title"><a href="life-insurance.php">Fitness consultation</a></h2>
                                     <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
                                 </div>
                             </div>
@@ -644,7 +644,7 @@
                             </div>
                             <div class="team-one__content">
                                 <p class="team-one__sub-title">Dietician</p>
-                                <h3 class="team-one__name"><a href="team-details.html">Thomas Jakson</a></h3>
+                                <h3 class="team-one__name"><a href="team-details.php">Thomas Jakson</a></h3>
                                 <ul class="list-unstyled team-one__social-two">
                                     <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                                 </ul>
@@ -668,7 +668,7 @@
                             </div>
                             <div class="team-one__content">
                                 <p class="team-one__sub-title">Health Expert</p>
-                                <h3 class="team-one__name"><a href="team-details.html">Hallen Smith</a></h3>
+                                <h3 class="team-one__name"><a href="team-details.php">Hallen Smith</a></h3>
                                 <ul class="list-unstyled team-one__social-two">
                                     <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                                 </ul>
@@ -692,7 +692,7 @@
                             </div>
                             <div class="team-one__content">
                                 <p class="team-one__sub-title">Fitness Expert</p>
-                                <h3 class="team-one__name"><a href="team-details.html">David Cooper</a></h3>
+                                <h3 class="team-one__name"><a href="team-details.php">David Cooper</a></h3>
                                 <ul class="list-unstyled team-one__social-two">
                                     <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
                                 </ul>

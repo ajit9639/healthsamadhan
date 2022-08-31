@@ -6,7 +6,6 @@
 
 <body>
 
-
 <?php include 'header.php' ?>
 
 <?php include 'mobile-header.php' ?>
