@@ -42,31 +42,29 @@
                                             <th scope="col">Services</th>
                                             <th scope="col">Year of Experience</th>
                                             <th scope="col">City</th>
-                                            <th scope="col">Address</th>
-
-                                            
-                                            <th scope="col">Action</th>
+                                            <th scope="col">Address</th>                                            
+                                            <!-- <th scope="col">Action</th> -->
                                         </tr>
                                     </thead>
                                     <?php
                 $data = mysqli_query($conn,"SELECT * FROM `health_expert_registration`");
                 while($all_rows = mysqli_fetch_assoc($data))
-                  {
+                  { ?>
                     
-                  echo "<tr>
-                          <td>$all_rows[id]</td>
-                          <td>$all_rows[first_name]</td>
-                          <td>$all_rows[last_name]</td>
-                          <td>$all_rows[email]</td>
-                          <td>$all_rows[phone]</td>
-                          <td>$all_rows[date]</td>
-                          <td>$all_rows[reg_no]</td>
-                          <td>$all_rows[gender]</td>
-                          <td>$all_rows[year_of_exp]</td>
-                          <td>$all_rows[city]</td>
-                          <td>$all_rows[address]</td>                          
-                                                   
-                          <td>                                                           
+                  <tr>
+                          <td><?=$all_rows['id']?></td>
+                          <td><?=$all_rows['first_name']?></td>
+                          <td><?=$all_rows['last_name']?></td>
+                          <td><?=$all_rows['email']?></td>
+                          <td><?=$all_rows['phone']?></td>
+                          <td><?=$all_rows['date']?></td>
+                          <td><?=$all_rows['reg_no']?></td>
+                          <td><?=$all_rows['gender']?></td>
+                          <td><?=$all_rows['year_of_exp']?></td>
+                          <td><?=$all_rows['city']?></td>
+                          <td><?=$all_rows['address']?></td>  
+
+                  <!-- </tr>                                                                                          
                           <span>                            
                           <a class='btn btn-success text-white' href='edit_health_expert.php?id=$all_rows[id]'><i class='typcn typcn-edit btn-icon-append'></i></a>                        
                           </span>
@@ -75,8 +73,8 @@
                             </span>
                           </td>
                           
-                      </tr>";
-                      
+                      </tr> -->
+                      <?php
                   }
               }
 

@@ -2,6 +2,7 @@
 body {
     background: url('./assets/img/bg.png') !important;
 }
+
 .main-section {
     width: 50%;
     margin: 0 auto;
@@ -9,21 +10,27 @@ body {
     background: #d5d5d5;
     padding: 20px;
 }
+
 .logo_section {
     text-align: center;
     width: 100%;
 }
-@media(max-width:576px){
+
+@media(max-width:576px) {
     .main-section {
         width: 100%;
         margin-top: 0px;
         height: 100vh;
     }
 }
+body{
+     background: url('../../assets/img/category/dr.png');
+    background-size: cover;
+}
 </style>
 
 <body>
-<?php 
+    <?php 
 
 include 'conn.php'; 
 
@@ -69,7 +76,7 @@ echo "<script>alert('Invalid Login')</script>";
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
         <!-- sweet alert -->
-         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script type="text/javascript">
         function JSalert() {
             Swal.fire(
@@ -78,7 +85,7 @@ echo "<script>alert('Invalid Login')</script>";
                 'success'
             )
         }
-    </script>
+        </script>
     </head>
 
     <body>
@@ -98,21 +105,29 @@ echo "<script>alert('Invalid Login')</script>";
                             <label for="pwd">Phone Number:</label>
                             <input type="number" class="form-control" placeholder="Enter Number" name="phone">
                         </div>
-                        
+
+                        <div class="col-md-12 mt-3">
+                            Already have an account ? <a href="register.php" class="">Register Here</a>
+                        </div>
+
                         <div class="col-md-2 mt-3">
                             <button type="submit" class="btn btn-info" name="submit">Login</button>
                         </div>
-                        <div class="col-md-2 mt-3">
-                            <a href="register.php" class="btn btn-success">Register</a>
-                        </div>
-                        <div class="col-md-3 mt-3">
+
+
+                        <!-- <div class="col-md-3 mt-3">
                             <a href="all_doctors_login.php" class="btn btn-danger">Doctor's Login</a>
-                        </div>
+                        </div> -->
 
                     </div>
                 </form>
 
             </div>
+
+            <p class="site-footer__bottom-text" style="text-align: center;
+    background: #3c3c3c;
+    color: #fff;">Powered by <a href="https://insightinfosystem.com">Insight Infosystem</a></p>
+
         </section>
     </body>
 

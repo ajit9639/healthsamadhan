@@ -27,6 +27,19 @@
           </li>
 
 
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#appointment" aria-expanded="false" aria-controls="sevices">
+              <i class="typcn typcn-document-text menu-icon"></i>
+              <span class="menu-title">Appointment</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="appointment">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="view_appointment.php">View Appointment</a></li>
+                
+              </ul>
+            </div>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#sevices" aria-expanded="false" aria-controls="sevices">

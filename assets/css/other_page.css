@@ -1,75 +1,84 @@
-.mobile-aside-bar{
+.mobile-aside-bar {
     padding-top: 90px;
 }
-.mobile-aside-bar li{
-padding: 5px;
-border-bottom: 1px solid #dee2e6;
+
+.mobile-aside-bar li {
+    padding: 5px;
+    border-bottom: 1px solid #dee2e6;
 }
-.mobile-aside-bar li a{
+
+.mobile-aside-bar li a {
     font-weight: 700!important;
-color: inherit;
-padding: 10px 20px;
-display: block;
-
-letter-spacing: 0.5px;
-word-spacing: 2px;
-font-size: 0.74rem;
-position: relative;
-opacity: 0.8;
+    color: inherit;
+    padding: 10px 20px;
+    display: block;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    font-size: 0.74rem;
+    position: relative;
+    opacity: 0.8;
 }
 
-.mobile-aside-bar li a::after{
-content: "\f105";
-font: normal normal normal 14px/1 FontAwesome;
-position: absolute;
-right: 20px;
-top: 12px;
+.mobile-aside-bar li a::after {
+    content: "\f105";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    right: 20px;
+    top: 12px;
 }
+
 
 /* ========================== */
 
-.general_info,.my_appointment{
-    padding-top: 100px;
-    padding-bottom: 100px;
+.general_info,
+.my_appointment {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.label, .input{
+.label,
+.input {
     margin-bottom: 20px;
 }
-.label label{
-font-family: "Poppins", sans-serif;
+
+.label label {
+    font-family: "Poppins", sans-serif;
     font-size: 0.75rem;
 }
 
 
 /* oppintment */
-.appoint_frame{
+
+.appoint_frame {
     display: flex;
     width: 100%;
 }
 
-.my_appointment .appoint_frame .date, .my_appointment .appoint_frame .date span{
+.my_appointment .appoint_frame .date,
+.my_appointment .appoint_frame .date span {
     width: 100%;
     display: block;
 }
-.my_appointment .appoint_frame .date{
-background-color: #0095ff;
-padding: 15px;
-width: 30%;
-color: #fff;
+
+.my_appointment .appoint_frame .date {
+    background-color: #0095ff;
+    padding: 10px;
+    width: 35%;
+    color: #fff;
 }
-.my_appointment .appoint_frame .title{
+
+.my_appointment .appoint_frame .title {
     width: 70%;
     border: 2px solid #0095ff;
 }
 
-.my_appointment .appoint_frame .title p{
+.my_appointment .appoint_frame .title p {
     font-weight: 600;
     margin-left: 20px;
     margin-bottom: 0px;
 }
-.my_appointment .appoint_frame .title small{
+
+.my_appointment .appoint_frame .title small {
     font-weight: 400;
     margin-left: 20px;
 }
-

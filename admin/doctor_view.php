@@ -43,44 +43,47 @@
                                             <th scope="col">Year of Experience</th>
                                             <th scope="col">City</th>
                                             <th scope="col">Address</th>
-                                            <th scope="col">Image</th>
+                                            <!-- <th scope="col">Image</th> -->
 
-                                            
-                                            <th scope="col">Action</th>
+                                            <!-- <th scope="col">Action</th> -->
                                         </tr>
                                     </thead>
                                     <?php
                 $data = mysqli_query($conn,"SELECT * FROM `doctor_registration`");
                 while($all_rows = mysqli_fetch_assoc($data))
                   {?>
-                    
-                 <tr>
-                          <td><?=$all_rows['id']?></td>
-                          <td><?=$all_rows['first_name']?></td>
-                          <td><?=$all_rows['last_name']?></td>
-                          <td><?=$all_rows['email']?></td>
-                          <td><?=$all_rows['phone']?></td>
-                          <td><?=$all_rows['date']?></td>
-                          <td><?=$all_rows['reg_no']?></td>
-                          <td><?=$all_rows['gender']?></td>
-                          <td><?=$all_rows['year_of_exp']?></td>
-                          <td><?=$all_rows['city']?></td>
-                          <td><?=$all_rows['address']?></td>
-                          <td></td>
-                          
-                                                   
-                          <td>                                                           
-                          <span>                            
-                          <a class='btn btn-success text-white' href='edit_doctor.php?id=$all_rows[id]'><i class='typcn typcn-edit btn-icon-append'></i></a>                        
-                          </span>
-                            <span>                            
-                              <a class='btn btn-danger text-white' href='edit_doctor.php?id=$all_rows[id]&type=delete'><i class='typcn typcn-delete-outline btn-icon-append'></i></a>                            
-                            </span>
-                          </td>
-                          
-                      </tr>
-                      
-                 <?php }
+
+                                    <tr>
+                                        <td><?=$all_rows['id']?></td>
+                                        <td><?=$all_rows['first_name']?></td>
+                                        <td><?=$all_rows['last_name']?></td>
+                                        <td><?=$all_rows['email']?></td>
+                                        <td><?=$all_rows['phone']?></td>
+                                        <td><?=$all_rows['date']?></td>
+                                        <td><?=$all_rows['reg_no']?></td>
+                                        <td><?=$all_rows['gender']?></td>
+                                        <td><?=$all_rows['year_of_exp']?></td>
+                                        <td><?=$all_rows['city']?></td>
+                                        <td><?=$all_rows['address']?></td>
+                                        <!-- <td></td> -->
+
+
+                                        <!-- <td>
+                                            <span>
+                                                <a class='btn btn-success text-white'
+                                                    href='edit_doctor.php?id=$all_rows[id]'><i
+                                                        class='typcn typcn-edit btn-icon-append'></i></a>
+                                            </span>
+                                            <span>
+                                                <a class='btn btn-danger text-white'
+                                                    href='edit_doctor.php?id=$all_rows[id]&type=delete'><i
+                                                        class='typcn typcn-delete-outline btn-icon-append'></i></a>
+                                            </span>
+                                        </td> -->
+
+                                    </tr>
+
+                                    <?php }
               }
 
               else 

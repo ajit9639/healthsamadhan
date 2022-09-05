@@ -39,7 +39,9 @@
                 $data = mysqli_query($conn,"SELECT * FROM `add_vital_weight`");
                 $s=1;
                 while($all_rows = mysqli_fetch_assoc($data))
-                  {?>
+                  {
+                   
+                    ?>
                     
                   <tr>
                           <td><?= $s ?></td>
@@ -47,6 +49,7 @@
                           <td><?= $all_rows['date'] ?></td>
                           <td><?= $all_rows['weight'] ?></td>                                                                                                 
                           <td><?= $all_rows['user_id'] ?></td>                                                                                                 
+                                                                                                                    
                           
                       </tr>
                       <?php 

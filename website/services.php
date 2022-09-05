@@ -45,14 +45,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-1.jpg" alt="">
+                                <img src="assets/images/services/Dental-care.jpg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-drive"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="car-insurance.php">Car insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="car-insurance.php">Dental care</a></h2>
+                                <p class="service-one__text">24*7 Dental Care available at health samadhan.</p>
                             </div>
                         </div>
                     </div>
@@ -61,14 +61,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-2.jpg" alt="">
+                                <img src="assets/images/services/th.jpeg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-family"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="life-insurance.php">Life insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="life-insurance.php">Pharmaceutical care</a></h2>
+                                <p class="service-one__text">All Drugs available at Health Samadhan.</p>
                             </div>
                         </div>
                     </div>
@@ -77,14 +77,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-3.jpg" alt="">
+                                <img src="assets/images/services/Prenatal-Care-Guidelines.jpg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-home"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="home-insurance.php">Home insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="home-insurance.php">Prenatal Care</a></h2>
+                                <p class="service-one__text">Best prenatal care available at health samadhan.</p>
                             </div>
                         </div>
                     </div>
@@ -93,14 +93,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-4.jpg" alt="">
+                                <img src="assets/images/services/OPD-Full-Form-in-Hindi-768x432.jpg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-heart-beat"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="health-insurance.php">Health insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="health-insurance.php">Out Patient Department</a></h2>
+                                <p class="service-one__text">24*7 Doctors available at Health Samadhan.</p>
                             </div>
                         </div>
                     </div>
@@ -109,14 +109,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="500ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-5.jpg" alt="">
+                                <img src="assets/images/services/glucose-level-blood-test-1185738340-75b803e23e9a4ce6a550cbf41c3c2972.jpg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-briefcase"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="business-insurance.php">Business insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="business-insurance.php">Diabetic care</a></h2>
+                                <p class="service-one__text">Diabetes test available at nominal cost.</p>
                             </div>
                         </div>
                     </div>
@@ -125,14 +125,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="600ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-6.jpg" alt="">
+                                <img src="assets/images/services/downloadFromDb.jpeg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-fire"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="fire-insurance.php">Fire insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="fire-insurance.php">Full Body Checkup</a></h2>
+                                <p class="service-one__text">Full body checkup available at nominal cost at Health Samdhan.</p>
                             </div>
                         </div>
                     </div>
@@ -141,14 +141,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="700ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-7.jpg" alt="">
+                                <img src="assets/images/services/th (1).jpeg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-ring"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="marriage-insurance.php">Marriage insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="marriage-insurance.php">Emergency Healthcare</a></h2>
+                                <p class="service-one__text">24*7 Doctors available at your services in case of emergency.</p>
                             </div>
                         </div>
                     </div>
@@ -157,14 +157,14 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="800ms">
                         <div class="services-one__single">
                             <div class="service-one__img">
-                                <img src="assets/images/services/services-1-8.jpg" alt="">
+                                <img src="assets/images/services/mental-health.jpg" alt="">
                             </div>
                             <div class="service-one__content">
                                 <div class="services-one__icon">
                                     <span class="icon-plane"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="travel-insurance.php">Travel insurance</a></h2>
-                                <p class="service-one__text">Lorem ipsum dolor sit amet, sed consectetur adipiscing elit.</p>
+                                <h2 class="service-one__title"><a href="travel-insurance.php">Mental Healthcare</a></h2>
+                                <p class="service-one__text">Mental Healthcare services available at Health Samadhan.</p>
                             </div>
                         </div>
                     </div>

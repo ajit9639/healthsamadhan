@@ -1,0 +1,96 @@
+[03-Sep-2022 07:30:18 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:30:18 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:30:18 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:30:18 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:30:36 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:30:36 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:30:36 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:30:36 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:30:43 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:30:43 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:30:43 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:30:43 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 07:32:19 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 07:32:19 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 11:12:12 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 11:12:12 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[03-Sep-2022 11:12:12 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[03-Sep-2022 11:12:12 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:18:52 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:18:52 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:18:52 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:18:52 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:23:08 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:23:08 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/app/health/website/pricing.php on line 1
+[05-Sep-2022 07:23:08 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[05-Sep-2022 07:23:08 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/app/health/website/pricing.php:57
+Stack trace:
+#0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57

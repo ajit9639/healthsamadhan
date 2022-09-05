@@ -10,7 +10,7 @@
                             <a href="index.php"><img src="assets/logo.jpg" class="img-fluid" alt=""></a>
                         </div>
                         <div class="footer-widget__about-text-box">
-                            <p class="footer-widget__about-text">Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt.</p>
+                            <p class="footer-widget__about-text">Health Samadhan provides quick and easy access to health information. It is a one-stop shop for all your health needs. You can find information on diseases, symptoms, treatments, and medications. We have a team of experienced doctors who provide quality care to their patients. </p>
                         </div>
                         <div class="site-footer__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>

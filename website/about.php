@@ -55,17 +55,16 @@
                                 </div>
                                 <h2 class="section-title__title">Creating a better future for your loved once</h2>
                             </div>
-                            <p class="about-four__text-1">Nullam eu nibh vitae est tempor molest sed ex.</p>
-                            <p class="about-four__text-2">Quisque dignissim maximus ipsum, sed rutrum tincidunt et. Sed
-                                eget tincidunt ipsum. There are many passages of psum available, but the majority have
-                                alteration in some by injected humour, or randomised words look believable.</p>
+                            <p class="about-four__text-1">Our team, experience, facilities and equipment.
+</p>
+                            <p class="about-four__text-2">Health Samadhan is a leading provider of online medical healthcare services. Our team of experienced and qualified doctors, nurses and other medical staff are dedicated to providing our patients with the highest quality of care. We have state-of-the-art facilities and equipment, and our patient care philosophy is based on the belief that each patient is an individual with unique needs. We offer a wide range of medical services, including primary care, preventive care, diagnostic testing, treatment and surgery. We are committed to providing our patients with the best possible care.</p>
                             <div class="about-four__founder">
                                 <div class="about-four__founder-img">
                                     <img src="assets/images/resources/about-four-founder-img.jpg" alt="">
                                 </div>
                                 <div class="about-four__founder-content">
-                                    <h3 class="about-four__founder-name">David Hardson</h3>
-                                    <p class="about-four__founder-sub-title">Founder of insur</p>
+                                    <h3 class="about-four__founder-name">manish ludia</h3>
+                                    <p class="about-four__founder-sub-title">Founder of Health Samadhan</p>
                                 </div>
                             </div>
                         </div>
@@ -335,7 +334,7 @@
                         </div>
                         <div class="col-xl-6">
                             <div class="testimonial-one__top-right">
-                                <p class="testimonial-one__top-text">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec aliquet blandit enim feugiat mattis.</p>
+                                <p class="testimonial-one__top-text">"I found out about this site from a friend of mine who was very happy with the facilities. I'm always so busy at work and I really needed to find a way to get my blood pressure checked quickly and accurately, so I looked on their website and booked an appointment. It was so quick, easy and affordable that I would definitely recommend them."</p>
                             </div>
                         </div>
                     </div>
@@ -390,11 +389,11 @@
                                                     </div>
                                                     <div class="testimonial-one__client-details">
                                                         <h3 class="testimonial-one__client-name">Smith Vectoria</h3>
-                                                        <p class="testimonial-one__client-sub-title">director</p>
+                                                        <p class="testimonial-one__client-sub-title"></p>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p class="testimonial-one__text">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec aliquet blandit enim feugiat mattis.</p>
+                                            <p class="testimonial-one__text">"Health Samadhan has been a life saver for my family. I was diagnosed with an illness and my doctor recommended that I get treatment from them. You would think that this is a great thing, but it is also expensive, so when I found Health Samadhan, I was pleasantly surprised to find out that they offer services at competitive rates."</p>
                                         </div>
                                     </div>
                                 </div>
@@ -424,7 +423,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p class="testimonial-one__text">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec aliquet blandit enim feugiat mattis.</p>
+                                            <p class="testimonial-one__text">"I would recommend Health Samadhan to anyone looking for a good and affordable healthcare facility. I was able to get all my medical treatments done in one place, and the online system made it so easy to apply for health care services."
+</p>
                                         </div>
                                     </div>
                                 </div>
@@ -454,7 +454,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p class="testimonial-one__text">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec aliquet blandit enim feugiat mattis.</p>
+                                            <p class="testimonial-one__text">"I was sceptical about the fact that I would not see a doctor but in no time at all, we got connected to one of the doctors and they answered my questions. After speaking with them for a few minutes, I felt reassured. The next day, I got an email from the doctor again asking me if I had any further questions."</p>
                                         </div>
                                     </div>
                                 </div>
@@ -484,7 +484,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p class="testimonial-one__text">Pellentesque habitant morbi tristique senectus netus et malesuada fames ac turp egestas. Aliquam viverra arcu. Donec aliquet blandit enim feugiat mattis.</p>
+                                            <p class="testimonial-one__text">"Health Samadhan has been a life saver for my family. I was diagnosed with an illness and my doctor recommended that I get treatment from them. You would think that this is a great thing, but it is also expensive, so when I found Health Samadhan, I was pleasantly surprised to find out that they offer services at competitive rates."</p>
                                         </div>
                                     </div>
                                 </div>

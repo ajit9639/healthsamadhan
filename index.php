@@ -2,7 +2,7 @@
     .dashboard-page{
     background: url('assets/img/category/dr.png');
     background-size: cover;
-    /* height: 100vh; */
+    padding: 35px 0px;
     }
 </style>
 

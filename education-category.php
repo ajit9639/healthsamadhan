@@ -49,7 +49,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-xs-4 col-4">
+                <!-- <div class="col-lg-3 col-xs-4 col-4">
                     <div class="product-brand">
                         <a href="education.php" class="product-img">
                             <img src="assets/img/category/live.png" class="" alt="">
@@ -58,11 +58,10 @@
                            Live Session
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
-
 
    
 

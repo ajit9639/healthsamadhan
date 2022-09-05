@@ -34,13 +34,27 @@ $my_email = $_SESSION['email'];
 $get_user = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` where `email`='$my_email'"));
 $gt_user_id = $get_user['assigned_doctor'];
 
-$gt = $get_user['assigned_doctor'];
-$get_my_doctor = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` where `user_id`='$gt'"));
+$gt_diet = $get_user['assigned_dietition'];
+$gt_health = $get_user['assigned_healthexpert'];
 
+$get_my_doctor = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` where `user_id`='$gt_user_id'"));
+$get_my_diet = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_diet` where `user_id`='$gt_diet'"));
+$get_my_health = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_healthexpert` where `user_id`='$gt_health'"));
+
+// doctor
 $get_me = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` where `email`='$my_email'"));
 $pac = $get_me['unique_id'];
 $doc = $get_my_doctor['unique_id'];
 
+// dietition
+$get_me_diet = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_diet` where `email`='$my_email'"));
+$pac_diet = $get_me_diet['unique_id'];
+$doc_diet = $get_my_diet['unique_id'];
+
+// healthexpert
+$get_me_health = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_healthexpert` where `email`='$my_email'"));
+$pac_health = $get_me_health['unique_id'];
+$doc_health = $get_my_health['unique_id'];
 
 
 
@@ -72,7 +86,11 @@ if(isset($_POST['submit'])){
 
 
     $ins = mysqli_query($conn , "INSERT INTO `add_vital_bp`(`date`, `systolic`, `diastolic`, `pulse`,`user_id`) VALUES ('$date','$Systolic','$Diastolic','$Pulse','$user_id')");
+    
     $ins1 = mysqli_query($conn , "INSERT INTO `messages_doctor`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc','$pac','$tt')");
+    $ins2 = mysqli_query($conn , "INSERT INTO `messages_dietition`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc_diet','$pac_diet','$tt')");
+    $ins3 = mysqli_query($conn , "INSERT INTO `messages_healthexpert`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc_health','$pac_health','$tt')");
+    
     if($ins){
         echo "<script>alert('success')</script>";
     }
@@ -105,14 +123,12 @@ if(isset($_GET['id']))
     <div class="container theme-container">
         <div class="row mb-2">
 
-
-
             <!-- scrollable tabs -->
             <div class="vitalscrollmenu">
+                <a class="active" href="add_vitals_bp.php">BP</a>
                 <a href="add_vitals_meal_pattern.php">Meal Pattern</a>
                 <a href="add_vitals_sugar_level.php">Sugar Level</a>
                 <a href="add_vitals_weight_in_kg.php">Weight(in Kg)</a>
-                <a class="active" href="add_vitals_bp.php">BP</a>
             </div>
             <!-- // scrollable tabs -->
             <form method="POST">

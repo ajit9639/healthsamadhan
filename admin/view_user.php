@@ -88,7 +88,7 @@
                             ?>
                           </option>
                             <?php
-                          $data12 = mysqli_query($conn,"SELECT * FROM `user_healthexpert`");
+                          $data12 = mysqli_query($conn,"SELECT * FROM `user_healthexpert` where `i_am`='healthexpert'");
                           while($all_rows12 = mysqli_fetch_assoc($data12)){?>
                           <option value="assign.php?doctorid=<?= $all_rows12['user_id']?>&type=health&id=<?= $all_rows['id'] ?>">   <?= $all_rows12['fname'] .' '. $all_rows12['lname'] ?></option>
                           <?php } ?>                         
@@ -107,7 +107,7 @@
                           ?>
                         </option>
                           <?php
-                          $data13 = mysqli_query($conn,"SELECT * FROM `user_diet`");
+                          $data13 = mysqli_query($conn,"SELECT * FROM `user_diet` where `i_am`='dietition'");
                           while($all_rows13 = mysqli_fetch_assoc($data13)){?>
                           <option value="assign.php?doctorid=<?= $all_rows13['user_id']?>&type=diet&id=<?= $all_rows['id'] ?>">  <?= $all_rows13['fname'] .' '. $all_rows13['lname'] ?></option>
                           <?php } ?>                         
