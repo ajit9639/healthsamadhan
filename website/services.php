@@ -233,7 +233,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="counter-one__text">Customers Engaged</p>
+                            <p class="counter-one__text">Patients Engaged</p>
                         </div>
                     </div>
                     <!--Counter One Single End-->
@@ -269,7 +269,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="counter-one__text">Satisfied customers</p>
+                            <p class="counter-one__text">Satisfied Patients</p>
                         </div>
                     </div>
                     <!--Counter One Single End-->

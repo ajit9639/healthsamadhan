@@ -2,6 +2,7 @@
 body {
     background: url('./assets/img/bg.png') !important;
 }
+
 .main-section {
     width: 75%;
     margin: 0 auto;
@@ -9,10 +10,12 @@ body {
     background: #d5d5d5;
     padding: 20px;
 }
+
 .logo_section {
     text-align: center;
     width: 100%;
 }
+
 @media(max-width:576px) {
     .main-section {
         width: 100%;
@@ -38,18 +41,23 @@ include 'conn.php';
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+
 </head>
 
 <body>
     <?php 
     
+  
+    $rand_val = rand(99999,999999);
+    echo ($rand_val);
+
     if(isset($_POST['submit'])){
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
     
     $gender = $_POST['gender'];
     $phone = $_POST['phone'];
+    $password = $_POST['password'];
     $email = $_POST['email'];
     $date = $_POST['date'];
     $height = $_POST['height'];
@@ -87,7 +95,7 @@ include 'conn.php';
         $ins2 = mysqli_query($conn , "INSERT INTO `user_diet`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
         $ins3 = mysqli_query($conn , "INSERT INTO `user_healthexpert`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
 
-    $ins = mysqli_query($conn , "INSERT INTO `signup`(`first_name`, `last_name`, `gender`, `phone_number`, `email`, `address`, `dob`, `height`, `weight`, `age`, `mother_tongue`, `marital_status`, `monthly_income`, `education`,`package_name`,`package_amount`, `assigned_doctor`, `assigned_dietition`, `assigned_healthexpert`, `user_status`) VALUES ('$first_name','$last_name','$gender','$phone','$email','$address','$date','$height','$weight','$age','$mother_tongue','$marital_status','$monthly_income','$education','$package_name','$package_amount','$assigned_doctor','$assigned_dietition','$assigned_healthexpert','$user_status')");
+    $ins = mysqli_query($conn , "INSERT INTO `signup`(`first_name`, `last_name`, `gender`, `phone_number`, `password` ,`email`, `address`, `dob`, `height`, `weight`, `age`, `mother_tongue`, `marital_status`, `monthly_income`, `education`,`package_name`,`package_amount`, `assigned_doctor`, `assigned_dietition`, `assigned_healthexpert`, `user_status`) VALUES ('$first_name','$last_name','$gender','$phone','$password','$email','$address','$date','$height','$weight','$age','$mother_tongue','$marital_status','$monthly_income','$education','$package_name','$package_amount','$assigned_doctor','$assigned_dietition','$assigned_healthexpert','$user_status')");
     if($ins){
         echo"<script>
         alert('Registration Successfully');
@@ -99,7 +107,7 @@ include 'conn.php';
     }
     }
     }
-     ?>
+    ?>
 
     <section class="main-section">
         <div class="container mt-4 mb-4">
@@ -136,8 +144,52 @@ include 'conn.php';
 
                         <div class="col-md-4">
                             <label>phone_number (Whatsapp)</label>
-                            <input type="number" class="form-control" placeholder="Enter Number" name="phone"
-                                pattern="[789][0-9]{9}" required>
+                            <input type="number" class="form-control" placeholder="Enter Number" name="phone" id="phone"
+                                onchange="javascript:calcu();" pattern="[789][0-9]{9}" required>
+                        </div>
+
+                        <input type="button" value="Send OTP" onclick="sendOTP()">
+
+                        <script>
+                            function sendOTP() {
+                                var phoneNumber = document.querySelector('[name="phone"]');
+                                var otp = document.querySelector('[name="otp"]');
+
+                                if (phoneNumber.value != '' && otp.value != '') {
+                                    var http = new XMLHttpRequest();
+                                    var url = 'send-otp.php';
+                                    var params = 'phoneNumber='+phoneNumber.value+'&otp='+otp.value;
+                                    http.open('POST', url, true);
+
+                                    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                                    http.onreadystatechange = function() {
+                                        if(http.readyState == 4 && http.status == 200) {
+                                            console.log(http.responseText);
+                                        }
+                                    }
+                                    http.send(params);
+                                }
+                            }
+                        </script>
+
+                        <!-- send otp -->
+                        <div class="col-md-4">
+                            <label>Enter OTP</label>
+                            <input type="number" class="form-control" placeholder="Enter OTP" id="input_otp"
+                                onchange="javascript:compair();" required>
+
+                            <input type="hidden" class="form-control" placeholder="Enter OTP" id="input_otp_compair"
+                                name="otp" value="<?php echo $rand_val?>"  required>
+
+                            <!-- <input type="submit" class="btn btn-danger btn-sm" name="otp_submit" value="submit otp"> -->
+                        </div>
+                        <!-- // send otp -->
+
+                        <div class="col-md-4">
+                            <label>password </label>
+                            <input type="password" class="form-control" placeholder="Enter Password" name="phone"
+                                required>
                         </div>
 
                         <div class="col-md-4">
@@ -200,8 +252,8 @@ include 'conn.php';
                         </div>
 
                         <div class="col-md-4">
-                            <label>Select Package <a href="view_package.php" class="text-danger font-weight-bold" name="submit">view package</a></label><br>
-                            
+                            <label>Select Package </label><br>
+
                             <select type="text" name="package_name" id="package" required="true"
                                 onChange="getsate(this.value)" class="form-control">
                                 <option value="">Select Package</option>
@@ -217,22 +269,30 @@ include 'conn.php';
 
                         <div class="col-md-4">
                             <label>Package Amount</label><br>
-                            <div id="package_amount"></div>                        
+                            <div id="package_amount"></div>
                         </div>
-
-                        
-                        
 
                         <div class="col-md-2 mt-2">
                             <button type="submit" class="btn btn-info" name="submit">Register</button>
                         </div>
-                        <div class="col-md-2 mt-2">
-                            <a href="login.php" class="btn btn-success">Login</a>
+
+                        <div class="col-md-12 mt-3">
+                            Already have an account ? <a href="login.php" class="">Login Here ?</a>
+                            <a href="login_otp.php" class="">Login with OTP ?</a>
                         </div>
+
+                        <!-- <div class="col-md-2 mt-2">
+                            <a href="login.php" class="btn btn-success">Login</a>
+                        </div> -->
+
                     </div>
                 </form>
 
             </div>
+
+            <p class="site-footer__bottom-text" style="text-align: center;
+    background: #3c3c3c;
+    color: #fff;">Powered by <a href="https://insightinfosystem.com">Insight Infosystem</a></p>
         </div>
     </section>
 
@@ -249,6 +309,36 @@ include 'conn.php';
 
         });
     }
+    </script>
+
+
+    <script>
+    function calcu() {
+
+        var input_otp_compair = document.getElementById('input_otp_compair').value;
+        var input_otp = document.getElementById('phone').value;
+
+        var num_inp = input_otp.toString().length;
+        if (num_inp == 10) {
+            alert('OTP Send to your whatsapp');
+            document.getElementById('phone').readOnly
+                        = true;
+        } else {
+            //alert('Invalid Whatsapp No');
+        }
+    }
+
+        function compair() {            
+            if (document.getElementById("input_otp_compair").value == document.getElementById("input_otp").value) {
+                alert('same');
+                document.getElementById('input_otp').readOnly
+                        = true;
+            } else {
+                //alert('different');
+                return true;
+            }
+        }
+    
     </script>
 </body>
 

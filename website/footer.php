@@ -4,7 +4,9 @@
     <div class="container">
         <div class="site-footer__top">
             <div class="row">
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+
+
+                <div class="col-xl-5 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                     <div class="footer-widget__column footer-widget__about">
                         <div class="footer-widget__logo">
                             <a href="index.php"><img src="assets/logo.jpg" class="img-fluid" alt=""></a>
@@ -12,16 +14,21 @@
                         <div class="footer-widget__about-text-box">
                             <p class="footer-widget__about-text">Health Samadhan provides quick and easy access to health information. It is a one-stop shop for all your health needs. You can find information on diseases, symptoms, treatments, and medications. We have a team of experienced doctors who provide quality care to their patients. </p>
                         </div>
-                        <div class="site-footer__social">
+                        
+
+                        <!-- <div class="site-footer__social">
                             <a href="#"><i class="fab fa-twitter"></i></a>
                             <a href="#"><i class="fab fa-facebook"></i></a>
                             <a href="#"><i class="fab fa-pinterest-p"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
-                        </div>
+                        </div> -->
+
+
                     </div>
                 </div>
                 
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+
+                <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="footer-widget__column footer-widget__gallery clearfix">
                         <h3 class="footer-widget__title">Quick Links</h3>
                         <ul class=" list-unstyled clearfix">
@@ -34,7 +41,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+
+
+                <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                     <div class="footer-widget__column footer-widget__gallery clearfix">
                         <h3 class="footer-widget__title">Quick Links</h3>
                         <ul class=" list-unstyled clearfix">
@@ -47,6 +56,8 @@
                         </ul>
                     </div>
                 </div>
+
+
                 <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                     <div class="footer-widget__column footer-widget__contact clearfix">
                         <h3 class="footer-widget__title">Contact</h3>
@@ -56,7 +67,7 @@
                                     <span class="icon-email"></span>
                                 </div>
                                 <div class="text">
-                                    <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                    <p><a href="mailto:info@healthsamadhan.com">info@healthsamadhan.com</a></p>
                                 </div>
                             </li>
                             <li>
@@ -79,6 +90,8 @@
                         </ul>
                     </div>
                 </div>
+
+
             </div>
         </div>
     </div>

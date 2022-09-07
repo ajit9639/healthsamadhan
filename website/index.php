@@ -549,7 +549,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="counter-one__text">Customers Engaged</p>
+                            <p class="counter-one__text">Patients Engaged</p>
                         </div>
                     </div>
                     <!--Counter One Single End-->
@@ -585,7 +585,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="counter-one__text">Satisfied customers</p>
+                            <p class="counter-one__text">Satisfied Patients</p>
                         </div>
                     </div>
                     <!--Counter One Single End-->
@@ -738,7 +738,7 @@
                                             <img src="assets/images/shapes/section-title-shape-2.png" alt="">
                                         </div>
                                     </div>
-                                    <h2 class="section-title__title">What our customers are <br> talking about</h2>
+                                    <h2 class="section-title__title">What our Patients are <br> talking about</h2>
                                 </div>
                             </div>
                         </div>

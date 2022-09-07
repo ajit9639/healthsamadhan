@@ -3,7 +3,7 @@
 
 
 <!--<div class="preloader">-->
-<!--    <div class="preloader__image"></div>-->
+<!--<div class="preloader__image"></div>-->
 <!--</div>-->
 <!-- //preloader -->
 
@@ -15,7 +15,8 @@
                 <div class="main-header__top-inner">
                     <div class="main-header__top-address">
                         <ul class="list-unstyled main-header__top-address-list">
-                            <li>
+                           
+                        <li>
                                 <i class="icon">
                                     <span class="icon-pin"></span>
                                 </i>
@@ -23,23 +24,27 @@
                                     <p>Sakchi, Jamshedpur</p>
                                 </div>
                             </li>
+
                             <li>
                                 <i class="icon">
                                     <span class="icon-email"></span>
                                 </i>
                                 <div class="text">
-                                    <p><a href="mailto:needhelp@company.com">healthsamadhan@gmail.com</a></p>
+                                    <p><a href="mailto:info@healthsamadhan.com">info@healthsamadhan.com</a></p>
                                 </div>
                             </li>
+
                         </ul>
                     </div>
                     <div class="main-header__top-right">
                         <div class="main-header__top-menu-box">
+
                             <!-- <ul class="list-unstyled main-header__top-menu">
                                 <li><a href="about.php">Make a Claim</a></li>
                                 <li><a href="faq.php"> FAQs</a></li>
                                 <li><a href="about.php">About</a></li>
                             </ul> -->
+
                         </div>
                         <div class="main-header__top-social-box">
                             <div class="main-header__top-social">
@@ -53,6 +58,7 @@
                 </div>
             </div>
         </div>
+
         <nav class="main-menu clearfix">
             <div class="main-menu__wrapper clearfix">
                 <div class="container">
@@ -65,28 +71,17 @@
                                 <div class="main-menu__main-menu-box-inner">
                                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                     <ul class="main-menu__list">
-                                        <li>
-                                            <a href="index.php">Home </a>
-                                        </li>
+                                        <li><a href="index.php">Home </a></li>
                                         <li><a href="about.php">About</a></li>
                                         <li><a href="pricing.php">Pricing</a></li>
-                                        <li class="dropdown"><a href="services.php">Services</a>
-                                            <ul>
-                                                <li><a href="single-service.php">Single service 1</a></li>
-                                                <li><a href="single-service.php">Single service 2</a></li>
-                                                <li><a href="single-service.php">Single service 3</a></li>
-                                                <li><a href="single-service.php">Single service 4</a></li>
-                                                <li><a href="single-service.php">Single service 5</a></li>
-                                            </ul>
-                                        </li>
-                                        <li>
-                                            <a href="contact.php">Contact </a>
-                                        </li>
+                                        <li><a href="services.php">Services</a></li>
+                                        <li><a href="contact.php">Contact </a></li>
                                     </ul>
                                 </div>
                                 <div class="main-menu__main-menu-box-search-get-quote-btn">
                                     <div class="main-menu__main-menu-box-get-quote-btn-box">
-                                        <a href="contact.php" class="thm-btn main-menu__main-menu-box-get-quote-btn">Get a Quote</a>
+                                        <a href="../login.php" class="thm-btn main-menu__main-menu-box-get-quote-btn">User
+                                            Login</a>
                                     </div>
                                 </div>
                             </div>
@@ -97,7 +92,7 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="main-menu__call-content">
-                                    <a href="tel:9200368090">+92 (003) 68-090</a>
+                                    <a href="tel:9200368090"> +9200368090 </a>
                                     <p>Call to Our Experts</p>
                                 </div>
                             </div>

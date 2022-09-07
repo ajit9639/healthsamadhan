@@ -3,6 +3,5 @@
 
 
     echo  $all_rows['id'];
-}
 
 ?>

@@ -32,6 +32,7 @@
                                             <th scope="col">Time</th>
                                             <th scope="col">Problem</th>
                                             <th scope="col">User Email</th>
+                                            <th scope="col">Phone Number</th>
 
                                             <!-- <th scope="col">Action</th> -->
                                         </tr>
@@ -48,6 +49,7 @@
                                         <td><?= $all_rows['time'] ?></td>
                                         <td><?= $all_rows['problem'] ?></td>
                                         <td><?= $all_rows['ref_id'] ?></td>
+                                        <td><?= $all_rows['phone_number'] ?></td>
                                     </tr>
                                     <?php 
                   $s++;}

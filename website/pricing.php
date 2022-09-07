@@ -1,4 +1,4 @@
-<?php include "config.php" ?>
+<?php include "../conn.php" ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,10 +43,12 @@
                 </div>
                 <div class="pricing__tab">
                     <div class="pricing__tab-box tabs-box">
-                        <!-- <ul class="tab-buttons clearfix list-unstyled">
+                       
+                    <!-- <ul class="tab-buttons clearfix list-unstyled">
                             <li data-tab="#monthly" class="tab-btn active-btn"><span>Monthly Plan</span></li>
                             <li data-tab="#yearly" class="tab-btn"><span>Yearly Plan</span></li>
                         </ul> -->
+
                         <div class="tabs-content">
                             <!--tab-->
                             <div class="tab active-tab" id="monthly">
@@ -81,12 +83,11 @@
                                                             <!-- <div class="icon">
                                                                 <i class="fa fa-check"></i>
                                                             </div> -->
+
                                                             <div class="text">
                                                                 <p><?= $all_rows['package_description'] ?></p>
                                                             </div>
-                                                        </li>
-                                                        
-
+                                                        </li>                                                        
                                                     </ul>
                                                     <div class="pricing__btn-box">
                                                         <a href="" class="thm-btn pricing__btn">Buy Now</a>
@@ -96,8 +97,7 @@
                                         </div>
 
                                         <?php } ?>
-                                        <!--Pricing Single End-->
-                                       
+                                        <!--Pricing Single End-->                                       
                                     </div>
                                 </div>
                             </div>
@@ -105,11 +105,7 @@
                             <div class="tab" id="yearly">
                                 <div class="pricing__main-content-box">
                                     <div class="row">
-                                        <!--Pricing Single Start-->
-                                     
-                                      
-                                        <!--Pricing Single End-->
-                                        <!--Pricing Single Start-->
+                                        <!--Pricing Single Start-->                                     
                                         <div class="col-xl-4 col-lg-4">
                                             <div class="pricing__single">
                                                 <div class="pricing-shape-1">
@@ -244,7 +240,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="counter-one__text">Customers Engaged</p>
+                            <p class="counter-one__text">Patients Engaged</p>
                         </div>
                     </div>
                     <!--Counter One Single End-->
@@ -280,7 +276,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <p class="counter-one__text">Satisfied customers</p>
+                            <p class="counter-one__text">Satisfied Patients</p>
                         </div>
                     </div>
                     <!--Counter One Single End-->

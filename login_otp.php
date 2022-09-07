@@ -97,18 +97,19 @@ echo "<script>alert('Invalid Login')</script>";
                         <div class="logo_section">
                             <img src="./assets/img/logo.png" alt="">
                         </div>
-                        <div class="col-md-12">
-                            <label for="email">Email:</label>
-                            <input type="email" class="form-control" placeholder="Enter email" name="email">
-                        </div>
+                      
                         <div class="col-md-12">
                             <label for="pwd">Phone Number:</label>
                             <input type="number" class="form-control" placeholder="Enter Number" name="phone">
                         </div>
 
+                          <div class="col-md-12">
+                            <label for="email">OTP:</label>
+                            <input type="number" class="form-control" placeholder="Enter otp" name="email">
+                        </div>
+
                         <div class="col-md-12 mt-3">
-                            Don't have an account ? <a href="register.php" class="">Register Here ?</a> 
-                             <a href="login_otp.php" class="">Login with OTP ?</a>
+                            Already have an account ? <a href="register.php" class="">Register Here</a>
                         </div>
 
                         <div class="col-md-2 mt-3">
