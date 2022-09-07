@@ -49,7 +49,7 @@ include 'conn.php';
     
   
     $rand_val = rand(99999,999999);
-    echo ($rand_val);
+    // echo ($rand_val);
 
     if(isset($_POST['submit'])){
     $first_name = $_POST['first_name'];
@@ -75,7 +75,7 @@ include 'conn.php';
     $assigned_dietition = 'not assigned';
     $assigned_healthexpert = 'not assigned';
     $user_status = 'unactive';
-    $password = "";
+   
     $image_data = "";
 
     $check = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email'"));
@@ -145,32 +145,39 @@ include 'conn.php';
                         <div class="col-md-4">
                             <label>phone_number (Whatsapp)</label>
                             <input type="number" class="form-control" placeholder="Enter Number" name="phone" id="phone"
-                                onchange="javascript:calcu();" pattern="[789][0-9]{9}" required>
+                                pattern="[789][0-9]{9}" onchange="javascript:sendOTP();" required>
                         </div>
 
-                        <input type="button" value="Send OTP" onclick="sendOTP()">
 
                         <script>
-                            function sendOTP() {
+                        function sendOTP() {
+                            var input_otp = document.getElementById('phone').value;
+
+                            var num_inp = input_otp.toString().length;
+                            if (num_inp == 10) {
+                                document.getElementById('phone').readOnly = true;
+
+
                                 var phoneNumber = document.querySelector('[name="phone"]');
                                 var otp = document.querySelector('[name="otp"]');
 
                                 if (phoneNumber.value != '' && otp.value != '') {
                                     var http = new XMLHttpRequest();
                                     var url = 'send-otp.php';
-                                    var params = 'phoneNumber='+phoneNumber.value+'&otp='+otp.value;
+                                    var params = 'phoneNumber=' + phoneNumber.value + '&otp=' + otp.value;
                                     http.open('POST', url, true);
 
                                     http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
                                     http.onreadystatechange = function() {
-                                        if(http.readyState == 4 && http.status == 200) {
+                                        if (http.readyState == 4 && http.status == 200) {
                                             console.log(http.responseText);
                                         }
                                     }
                                     http.send(params);
                                 }
                             }
+                        }
                         </script>
 
                         <!-- send otp -->
@@ -180,15 +187,13 @@ include 'conn.php';
                                 onchange="javascript:compair();" required>
 
                             <input type="hidden" class="form-control" placeholder="Enter OTP" id="input_otp_compair"
-                                name="otp" value="<?php echo $rand_val?>"  required>
-
-                            <!-- <input type="submit" class="btn btn-danger btn-sm" name="otp_submit" value="submit otp"> -->
+                                name="otp" value="<?php echo $rand_val?>" required>
                         </div>
                         <!-- // send otp -->
 
                         <div class="col-md-4">
                             <label>password </label>
-                            <input type="password" class="form-control" placeholder="Enter Password" name="phone"
+                            <input type="password" class="form-control" placeholder="Enter Password" name="password"
                                 required>
                         </div>
 
@@ -321,24 +326,21 @@ include 'conn.php';
         var num_inp = input_otp.toString().length;
         if (num_inp == 10) {
             alert('OTP Send to your whatsapp');
-            document.getElementById('phone').readOnly
-                        = true;
+            document.getElementById('phone').readOnly = true;
         } else {
             //alert('Invalid Whatsapp No');
         }
     }
 
-        function compair() {            
-            if (document.getElementById("input_otp_compair").value == document.getElementById("input_otp").value) {
-                alert('same');
-                document.getElementById('input_otp').readOnly
-                        = true;
-            } else {
-                //alert('different');
-                return true;
-            }
+    function compair() {
+        if (document.getElementById("input_otp_compair").value == document.getElementById("input_otp").value) {
+           // alert('same');
+            document.getElementById('input_otp').readOnly = true;
+        } else {
+            //alert('different');
+            return true;
         }
-    
+    }
     </script>
 </body>
 

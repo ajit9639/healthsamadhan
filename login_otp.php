@@ -23,8 +23,9 @@ body {
         height: 100vh;
     }
 }
-body{
-     background: url('../../assets/img/category/dr.png');
+
+body {
+    background: url('../../assets/img/category/dr.png');
     background-size: cover;
 }
 </style>
@@ -40,23 +41,35 @@ if(isset($_SESSION['email'])){
     </script>";
 }
 
+
 if(isset($_POST['submit'])){
-  $email = $_POST['email'];
+//   $email = $_POST['email'];
   $number = $_POST['phone'];
+  $input_otp = $_POST['input_otp'];
+  $otp = $_POST['otp'];
 
-  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email' AND `phone_number`='$number'"));
+  if($input_otp == $otp){
+
+    // echo "SELECT * FROM `signup` WHERE  `phone_number`='$number'";
+  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `signup` WHERE  `phone_number`='$number'"));
+
+
     if($check == '1'){
-
-    $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email'"));
+    $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `phone_number`='$number'"));
     $getnm_my = $getnm['first_name'];
+    $getnm_my_email = $getnm['email'];
 
   $_SESSION['value'] = '1';
-  $_SESSION['email'] = $email;
+  $_SESSION['email'] = $getnm_my_email;
   $_SESSION['my_nm'] = $getnm_my;
 
 echo "<script>window.location.replace('index.php')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
+}
+}else{?>
+    <script>alert("invalid")</script>
+<?php 
 }
 }
 ?>
@@ -75,21 +88,14 @@ echo "<script>alert('Invalid Login')</script>";
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
-        <!-- sweet alert -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script type="text/javascript">
-        function JSalert() {
-            Swal.fire(
-                'Good job!',
-                'You clicked the button!',
-                'success'
-            )
-        }
-        </script>
+       
     </head>
 
     <body>
+        <?php
+    $rand_val = rand(99999,999999);
 
+?>
         <section class="main-section">
             <div class="container">
                 <form method="POST">
@@ -97,16 +103,60 @@ echo "<script>alert('Invalid Login')</script>";
                         <div class="logo_section">
                             <img src="./assets/img/logo.png" alt="">
                         </div>
-                      
+
                         <div class="col-md-12">
-                            <label for="pwd">Phone Number:</label>
-                            <input type="number" class="form-control" placeholder="Enter Number" name="phone">
+                            <label>phone_number (Whatsapp)</label>
+                            <input type="number" class="form-control" placeholder="Enter Number" name="phone" id="phone"
+                             pattern="[789][0-9]{9}" onchange="javascript:sendOTP();" required>
                         </div>
 
-                          <div class="col-md-12">
-                            <label for="email">OTP:</label>
-                            <input type="number" class="form-control" placeholder="Enter otp" name="email">
+                        <!-- <input type="button" value="Send OTP" onclick="sendOTP()"> -->
+
+                        <script>
+                        function sendOTP() {
+                            var input_otp = document.getElementById('phone').value;
+
+                            var num_inp = input_otp.toString().length;
+                            if (num_inp == 10) {
+                                document.getElementById('phone').readOnly = true;
+
+
+                                var phoneNumber = document.querySelector('[name="phone"]');
+                                var otp = document.querySelector('[name="otp"]');
+
+                                if (phoneNumber.value != '' && otp.value != '') {
+                                    var http = new XMLHttpRequest();
+                                    var url = 'send-otp.php';
+                                    var params = 'phoneNumber=' + phoneNumber.value + '&otp=' + otp.value;
+                                    http.open('POST', url, true);
+
+                                    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+                                    http.onreadystatechange = function() {
+                                        if (http.readyState == 4 && http.status == 200) {
+                                            console.log(http.responseText);
+                                        }
+                                    }
+                                    http.send(params);
+                                }
+                            }
+                        }
+                        </script>
+
+                        <!-- send otp -->
+                        <div class="col-md-12">
+                            <label>Enter OTP</label>
+                            <input type="number" class="form-control" placeholder="Enter OTP" id="input_otp" name="input_otp"
+                                onchange="javascript:compair();" required>
+
+                            <input type="hidden" class="form-control" placeholder="Enter OTP" id="input_otp_compair" 
+                                name="otp" value="<?php echo $rand_val?>" required>
                         </div>
+                        <!-- // send otp -->
+
+
+
+
 
                         <div class="col-md-12 mt-3">
                             Already have an account ? <a href="register.php" class="">Register Here</a>
@@ -129,8 +179,33 @@ echo "<script>alert('Invalid Login')</script>";
             <p class="site-footer__bottom-text" style="text-align: center;
     background: #3c3c3c;
     color: #fff;">Powered by <a href="https://insightinfosystem.com">Insight Infosystem</a></p>
-
         </section>
+
+
+        <script>
+        function calcu() {
+            var input_otp_compair = document.getElementById('input_otp_compair').value;
+            var input_otp = document.getElementById('phone').value;
+
+            var num_inp = input_otp.toString().length;
+            if (num_inp == 10) {
+                alert('OTP Send to your whatsapp');
+                document.getElementById('phone').readOnly = true;
+            } else {
+                //alert('Invalid Whatsapp No');
+            }
+        }
+
+        function compair() {
+            if (document.getElementById("input_otp_compair").value == document.getElementById("input_otp").value) {
+                // alert('same');
+                document.getElementById('input_otp').readOnly = true;
+            } else {
+                //alert('different');
+                return true;
+            }
+        }
+        </script>
     </body>
 
     </html>
