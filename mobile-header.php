@@ -13,12 +13,14 @@
                     <a href="index.php"><img src="assets/img/logo.png" alt="logo" class="header-logo"></a>
                 </div>
                 <div class="col-auto">
+
                     <!-- <ul class="header-right-options">
                         <li class="link-item">
                             <span class="badge badge-secondary">0</span>
                             <i class="ti-bag"></i>
                         </li>
                     </ul> -->
+
                 </div>
             </div>
             <div class="menu-sidebar">
@@ -30,7 +32,8 @@
                     <!-- <a href="#"  data-toggle="modal" data-dismiss="modal" data-target="#login_modal" class="btn btn-soft-primary btn-md">Login</a>
                     <a href="#" data-toggle="modal" data-dismiss="modal" data-target="#register_modal" class="btn btn-primary btn-md">Register</a> -->
                     <!-- <div class="avater btn-soft-primary"></div> -->
-                    <a href="profile.php"><?php echo 'Hello,'.' '. $_SESSION['my_nm']; ?></a>
+                    <!-- <a href="profile.php"><?php //echo 'Hello,'.' '. $_SESSION['my_nm']; ?></a> -->
+                    <a href=""><?php echo 'Hello,'.' '. $_SESSION['my_nm']; ?></a>
                 </div>
                 <div class="mobileMenuLinks mb-4 mt-2">
                     <!-- <h6>Account Info</h6> -->
@@ -40,7 +43,7 @@
                         <li><a href="my_subscription.php">My Subscriptions</a></li>
                         <!-- <li><a href="#">Program Adherence</a></li> -->
                         <!-- <li><a href="#">Choose Your Program</a></li> -->
-                        <li><a href="health_partner.php">Health Partners</a></li>
+                        <!-- <li><a href="health_partner.php">Health Partners</a></li> -->
                         <li><a href="payment_history.php">Payment History</a></li>
                         <li><a href="faq.php">FAQ</a></li>
                         <li><a href="logout.php">Logout</a></li>

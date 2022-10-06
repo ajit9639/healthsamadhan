@@ -1,0 +1,104 @@
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[07-Sep-2022 12:29:33 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[07-Sep-2022 12:38:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[07-Sep-2022 12:38:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[07-Sep-2022 12:38:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[07-Sep-2022 12:39:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[07-Sep-2022 12:39:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[07-Sep-2022 12:39:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[10-Sep-2022 06:59:48 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[13-Sep-2022 10:38:02 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[13-Sep-2022 11:57:11 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[13-Sep-2022 12:01:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 12:01:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 12:01:15 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[13-Sep-2022 12:02:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/add_vitals_meal_pattern.php on line 53
+[13-Sep-2022 12:02:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/add_vitals_meal_pattern.php on line 58
+[13-Sep-2022 12:02:33 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/add_vitals_meal_pattern.php on line 63
+[13-Sep-2022 12:02:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 12:02:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 12:02:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[13-Sep-2022 12:02:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 12:02:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 12:02:43 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[13-Sep-2022 12:02:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 12:02:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 12:02:58 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[13-Sep-2022 12:03:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[13-Sep-2022 12:03:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[13-Sep-2022 12:03:59 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[14-Sep-2022 11:18:42 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[27-Sep-2022 11:43:36 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[27-Sep-2022 11:44:48 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[27-Sep-2022 11:52:03 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Undefined array key "email" in /home/posigraph/public_html/app/health/index.php on line 20
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 22
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 23
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 24
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 29
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 32
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/posigraph/public_html/app/health/index.php on line 35
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/header.php on line 40
+[27-Sep-2022 12:12:16 UTC] PHP Warning:  Undefined array key "my_nm" in /home/posigraph/public_html/app/health/mobile-header.php on line 33

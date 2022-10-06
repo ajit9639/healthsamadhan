@@ -75,6 +75,7 @@
                                         <li><a href="about.php">About</a></li>
                                         <li><a href="pricing.php">Pricing</a></li>
                                         <li><a href="services.php">Services</a></li>
+                                        <li><a href="medicines.php">Medicines</a></li>
                                         <li><a href="contact.php">Contact </a></li>
                                     </ul>
                                 </div>
@@ -86,6 +87,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="main-menu__right">
                             <div class="main-menu__call">
                                 <div class="main-menu__call-icon">

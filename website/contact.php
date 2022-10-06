@@ -50,12 +50,13 @@
                                 </div>
                                 <div class="contact-page__call-email-content">
                                     <h4>
-                                        <a href="tel:9200368090" class="contact-page__call-number">+92 (003) 68-090</a>
-                                        <a href="mailto:needhelp@company.com" class="contact-page__email">needhelp@company.com</a>
+                                        <a href="tel:9200368090" class="contact-page__call-number"> +9200368090 </a>
+                                        <a href="mailto:info@healthsamadhan.com" class="contact-page__email">info@healthsamadhan.com</a>
                                     </h4>
                                 </div>
                             </div>
-                            <p class="contact-page__location-text">30 Commecial Broklyn Road <br> Fratton, Australia</p>
+                            <p class="contact-page__location-text">
+Sakchi, Jamshedpur</p>
                         </div>
                     </div>
                     <div class="col-xl-8 col-lg-7">
@@ -140,7 +141,7 @@
         <!--Google Map Start-->
         <section class="google-map-two">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14712.196547528589!2d86.19303950781251!3d22.800643100000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f5e31b47f1e5f9%3A0x655a40af5b6c5a0b!2sDr%20Manish%20Dudia%20Patanjali%20Clinic%20Sakchi!5e0!3m2!1sen!2sin!4v1665043231509!5m2!1sen!2sin"
                 class="google-map__two" allowfullscreen></iframe>
 
         </section>

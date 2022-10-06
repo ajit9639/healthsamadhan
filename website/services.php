@@ -17,9 +17,9 @@
                     <ul class="thm-breadcrumb list-unstyled">
                         <li><a href="index.php">Home</a></li>
                         <li><span>/</span></li>
-                        <li>Insurance One</li>
+                        <li>Services</li>
                     </ul>
-                    <h2>Insurance one</h2>
+                    <h2>Services</h2>
                 </div>
             </div>
         </section>
@@ -51,7 +51,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-drive"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="car-insurance.php">Dental care</a></h2>
+                                <h2 class="service-one__title"><a href="">Dental care</a></h2>
                                 <p class="service-one__text">24*7 Dental Care available at health samadhan.</p>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-family"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="life-insurance.php">Pharmaceutical care</a></h2>
+                                <h2 class="service-one__title"><a href="">Pharmaceutical care</a></h2>
                                 <p class="service-one__text">All Drugs available at Health Samadhan.</p>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-home"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="home-insurance.php">Prenatal Care</a></h2>
+                                <h2 class="service-one__title"><a href="">Prenatal Care</a></h2>
                                 <p class="service-one__text">Best prenatal care available at health samadhan.</p>
                             </div>
                         </div>
@@ -99,7 +99,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-heart-beat"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="health-insurance.php">Out Patient Department</a></h2>
+                                <h2 class="service-one__title"><a href="">Out Patient Department</a></h2>
                                 <p class="service-one__text">24*7 Doctors available at Health Samadhan.</p>
                             </div>
                         </div>
@@ -115,7 +115,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-briefcase"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="business-insurance.php">Diabetic care</a></h2>
+                                <h2 class="service-one__title"><a href="">Diabetic care</a></h2>
                                 <p class="service-one__text">Diabetes test available at nominal cost.</p>
                             </div>
                         </div>
@@ -131,7 +131,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-fire"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="fire-insurance.php">Full Body Checkup</a></h2>
+                                <h2 class="service-one__title"><a href="">Full Body Checkup</a></h2>
                                 <p class="service-one__text">Full body checkup available at nominal cost at Health Samdhan.</p>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-ring"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="marriage-insurance.php">Emergency Healthcare</a></h2>
+                                <h2 class="service-one__title"><a href="">Emergency Healthcare</a></h2>
                                 <p class="service-one__text">24*7 Doctors available at your services in case of emergency.</p>
                             </div>
                         </div>
@@ -163,7 +163,7 @@
                                 <div class="services-one__icon">
                                     <span class="icon-plane"></span>
                                 </div>
-                                <h2 class="service-one__title"><a href="travel-insurance.php">Mental Healthcare</a></h2>
+                                <h2 class="service-one__title"><a href="">Mental Healthcare</a></h2>
                                 <p class="service-one__text">Mental Healthcare services available at Health Samadhan.</p>
                             </div>
                         </div>

@@ -63,7 +63,7 @@
                                     <img src="assets/images/resources/about-four-founder-img.jpg" alt="">
                                 </div>
                                 <div class="about-four__founder-content">
-                                    <h3 class="about-four__founder-name">manish ludia</h3>
+                                    <h3 class="about-four__founder-name">manish dudia</h3>
                                     <p class="about-four__founder-sub-title">Founder of Health Samadhan</p>
                                 </div>
                             </div>
@@ -503,7 +503,4 @@
 
         <?php include 'footer.php' ?>
 </body>
-
-
-<!-- Mirrored from layerdrops.com/insur/main-html/about.php by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Jul 2022 05:20:42 GMT -->
 </html>

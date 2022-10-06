@@ -111,36 +111,96 @@ echo "<script>alert('Invalid Login')</script>";
                         </div>
 
                         <!-- <input type="button" value="Send OTP" onclick="sendOTP()"> -->
+<?php 
+
+function sendOTP(){         
+// $ch = @mysqli_connect("localhost","insighti_labes","Labes123.","insighti_labes") or die("connection failure");
+
+if($_SERVER['SERVER_NAME'] == "localhost"){
+    $ch = mysqli_connect("localhost", "root", "", "health_smadhan_db");
+}else{
+    $ch = mysqli_connect("localhost", "posigraph_health_smadhan", "xC3Eug~T$+ps", "posigraph_health_smadhanDB");
+}
+
+
+// $Mob = 8603310087;
+$otp = rand('100000', '999999');       
+// $link = mysqli_connect("localhost","insighti_labes","Labes123.","insighti_labes");
+//Your authentication key
+$authKey = "14107AXVZG4hH18q5f815112P15";
+//Multiple mobiles numbers separated by comma
+$mobileNumber = $_POST['phone'];
+//Sender ID,While usi
+$senderId = "LBSJSR";
+$country = "91";
+$DLT_TE_ID = "1207163497526511297";
+//Your message to send, Add URL encoding here.
+$message = 'Your LABES login OTP code is'  .$otp;
+//Define route 
+$route = "4";
+//Prepare you post parameters
+$postData = array(
+    'authkey' => $authKey,
+	'country' => $country,
+    'mobiles' => $mobileNumber,
+    'message' => $message,
+    'sender' => $senderId,
+	'DLT_TE_ID' => $DLT_TE_ID,
+    'route' => $route
+);
+//API URL
+$url="http://bulksms.insightinfosystem.com/api/sendhttp.php";
+// init the resource
+$ch = curl_init();
+curl_setopt_array($ch, array(
+    CURLOPT_URL => $url,
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST => true,
+    CURLOPT_POSTFIELDS => $postData
+    //,CURLOPT_FOLLOWLOCATION => true
+));
+//Ignore SSL certificate verification
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+//get response
+$output = curl_exec($ch);
+//Print error if any
+if(curl_errno($ch))
+{
+    echo 'error:' . curl_error($ch);
+}
+curl_close($ch);
+}
+?>
 
                         <script>
-                        function sendOTP() {
-                            var input_otp = document.getElementById('phone').value;
 
-                            var num_inp = input_otp.toString().length;
-                            if (num_inp == 10) {
-                                document.getElementById('phone').readOnly = true;
+                        // send otp in whatsapp
 
 
-                                var phoneNumber = document.querySelector('[name="phone"]');
-                                var otp = document.querySelector('[name="otp"]');
+                        // function sendOTP() {                                            
+                        //     var input_otp = document.getElementById('phone').value;
+                        //     var num_inp = input_otp.toString().length;
+                        //     if (num_inp == 10) {
+                        //         document.getElementById('phone').readOnly = true;
+                        //         var phoneNumber = document.querySelector('[name="phone"]');
+                        //         var otp = document.querySelector('[name="otp"]');
+                        //         if (phoneNumber.value != '' && otp.value != '') {
+                        //             var http = new XMLHttpRequest();
+                        //             var url = 'send-otp.php';
+                        //             var params = 'phoneNumber=' + phoneNumber.value + '&otp=' + otp.value;
+                        //             http.open('POST', url, true);
+                        //             http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                        //             http.onreadystatechange = function() {
+                        //                 if (http.readyState == 4 && http.status == 200) {
+                        //                     console.log(http.responseText);
+                        //                 }
+                        //             }
+                        //             http.send(params);
+                        //         }
+                        //     }
+                        // }
 
-                                if (phoneNumber.value != '' && otp.value != '') {
-                                    var http = new XMLHttpRequest();
-                                    var url = 'send-otp.php';
-                                    var params = 'phoneNumber=' + phoneNumber.value + '&otp=' + otp.value;
-                                    http.open('POST', url, true);
-
-                                    http.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-
-                                    http.onreadystatechange = function() {
-                                        if (http.readyState == 4 && http.status == 200) {
-                                            console.log(http.responseText);
-                                        }
-                                    }
-                                    http.send(params);
-                                }
-                            }
-                        }
                         </script>
 
                         <!-- send otp -->

@@ -65,7 +65,7 @@
                                                 <div class="pricing-shape-1">
                                                     <img src="assets/images/shapes/pricing-shape-1.png" alt="">
                                                 </div>
-                                                <div class="pricing__single-top">
+                                                <!-- <div class="pricing__single-top">
                                                     <div class="pricing__img">
                                                         <img src="assets/images/resources/pricing-img-2.png" alt="">
                                                     </div>
@@ -73,7 +73,12 @@
                                                         <h3>Rs <?= $all_rows['package_amount'] ?></h3>
                                                         <p>Per month</p>
                                                     </div>
-                                                </div>
+                                                </div> -->
+
+                                                <div class="pricing__content">
+                                                        <h3>Rs <?= $all_rows['package_amount'] ?> </h3>
+                                                        <p><?= $all_rows['package_duration'] ?> Year</p>
+                                                    </div>
                                                 <div class="pricing__single-bottom">
                                                     <h3 class="pricing__title"><?= $all_rows['package_name'] ?></h3>
                                                     <ul class="list-unstyled pricing__points">
@@ -90,7 +95,12 @@
                                                         </li>                                                        
                                                     </ul>
                                                     <div class="pricing__btn-box">
-                                                        <a href="" class="thm-btn pricing__btn">Buy Now</a>
+                                                        <!-- <a href="" class="thm-btn pricing__btn">Buy Now</a> -->
+                                                        <form method="post" action="buy_package.php">
+                                                            <input type="hidden" name="package_name" value="<?= $all_rows['package_name'] ?>">
+                                                            <input type="hidden" name="package_amount" value="<?= $all_rows['package_amount'] ?>">
+                                                            <input type="submit" value="Buy Now" name="buy_now" class="thm-btn pricing__btn">
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>

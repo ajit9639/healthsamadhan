@@ -660,7 +660,7 @@
                     .main-menu__main-menu-box-search-get-quote-btn {
                         display: flex;
                         align-items: center;
-                        padding-left: 70px;
+                        padding-left: 20px;
                     }
                     
                     .main-menu__main-menu-box-search {
@@ -794,7 +794,7 @@
                     
                     .main-menu .main-menu__list>li+li,
                     .stricky-header .main-menu__list>li+li {
-                        margin-left: 40px;
+                        margin-left: 30px;
                     }
                     
                     .main-menu .main-menu__list>li>a,
@@ -1137,7 +1137,7 @@
                     
                     .mobile-nav__content {
                         width: 300px;
-                        background-color: var(--insur-black);
+                        background-color: #fff!important;
                         z-index: 10;
                         position: relative;
                         height: 100%;
@@ -1179,7 +1179,7 @@
                         top: 20px;
                         right: 15px;
                         font-size: 18px;
-                        color: var(--insur-white);
+                        color: #000;
                         cursor: pointer;
                     }
                     
@@ -1201,7 +1201,7 @@
                     .mobile-nav__content .main-menu__list>li:not(:last-child),
                     .mobile-nav__content .main-menu__list>li>ul>li:not(:last-child),
                     .mobile-nav__content .main-menu__list>li>ul>li>ul>li:not(:last-child) {
-                        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                     }
                     
                     .mobile-nav__content .main-menu__list>li>a>.main-menu-border {
@@ -1218,7 +1218,7 @@
                         -ms-flex-pack: justify;
                         justify-content: space-between;
                         line-height: 30px;
-                        color: #ffffff;
+                        color: #000000;
                         font-size: 14px;
                         font-family: var(--insur-font, "Rubik", sans-serif);
                         font-weight: 500;
@@ -1359,7 +1359,7 @@
                     }
                     
                     .mobile-nav__contact li a {
-                        color: #ffffff;
+                        color: #000000;
                         -webkit-transition: 500ms;
                         transition: 500ms;
                     }
@@ -12085,7 +12085,7 @@
                     .pricing__content {
                         position: relative;
                         display: block;
-                        text-align: right;
+                        /* text-align: right; */
                     }
                     
                     .pricing__content h3 {
@@ -12097,7 +12097,7 @@
                     }
                     
                     .pricing__content p {
-                        color: var(--insur-primary);
+                        color: #000;
                         font-weight: 500;
                         letter-spacing: var(--insur-letter-spacing);
                     }

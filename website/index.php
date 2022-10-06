@@ -465,7 +465,7 @@
                                 <img src="assets/images/resources/get-insurance-img-1.png" alt="">
                             </div>
                             <div class="get-insurance__author">
-                                <p>Manish dudia</p>
+                                <!-- <p>Manish dudia</p> -->
                             </div>
                             <div class="get-insurance__circle"></div>
                             <div class="get-insurance__shape-1 float-bob-x">

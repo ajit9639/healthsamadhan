@@ -1,0 +1,10 @@
+[13-Sep-2022 12:02:41 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/posigraph/public_html/app/health/doctor_chat/chat.php:17
+Stack trace:
+#0 /home/posigraph/public_html/app/health/doctor_chat/chat.php(17): mysqli_num_rows(false)
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/doctor_chat/chat.php on line 17
+[13-Sep-2022 12:02:50 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_num_rows(): Argument #1 ($result) must be of type mysqli_result, bool given in /home/posigraph/public_html/app/health/doctor_chat/chat.php:17
+Stack trace:
+#0 /home/posigraph/public_html/app/health/doctor_chat/chat.php(17): mysqli_num_rows(false)
+#1 {main}
+  thrown in /home/posigraph/public_html/app/health/doctor_chat/chat.php on line 17
