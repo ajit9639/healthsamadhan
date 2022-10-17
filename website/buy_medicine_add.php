@@ -98,290 +98,297 @@ if ($type == 'delete') {
 
 <body class="custom-cursor">
 
-<?php include 'header.php' ?>
+    <?php include 'header.php' ?>
 
-  
-<body class="theme-red">
-   
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
 
-    <section class="content">
-        <div class="container-fluid">
-            <div class="block-header">
-                <h2>Manage Company</h2>
-            </div>
+    <body class="theme-red">
 
-            <div class="row clearfix">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="card" id="card">
-                        <div class="header">
-                            <h2>
-                                Company
-                            </h2>
+        <!-- Overlay For Sidebars -->
+        <div class="overlay"></div>
 
-                        </div>
-                        <div class="body">
-                            <form id="sender_form" method="post" action="#" enctype="multipart/form-data">
-                                <input type="hidden" name="id" value="<?php if (isset($_GET['id'])) {
+        <section class="content">
+            <div class="container-fluid">
+                <div class="block-header">
+                    <h2>Manage Company</h2>
+                </div>
+
+                <div class="row clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="card" id="card">
+                            <div class="header">
+                                <h2>
+                                    Company
+                                </h2>
+
+                            </div>
+                            <div class="body">
+                                <form id="sender_form" method="post" action="#" enctype="multipart/form-data">
+                                    <input type="hidden" name="id" value="<?php if (isset($_GET['id'])) {
                                                                             echo $data['id'];
                                                                         } ?>">
 
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Name" name="Name" class="form-control"
-                                            value="<?php echo @$data['Name']; ?>">
-                                        <label class="form-label">Company Name</label>
-                                    </div>
-                                </div>
-
-                               
-                                
-                                
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="State_Code" name="State_Code" class="form-control"
-                                            value="<?php echo @$data['State_Code']; ?>">
-                                        <label class="form-label">GSTIN</label>
-                                    </div>
-                                </div>
-								
-                              <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="gstaddress" name="gstaddress" class="form-control"
-                                            value="<?php echo @$data['gstaddress']; ?>">
-                                        <label class="form-label">GST Address</label>
-                                    </div>
-                                </div>
-                              
-                                
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Mobile_No" name="Mobile_No" class="form-control"
-                                            value="<?php echo @$data['Mobile_No']; ?>">
-                                        <label class="form-label">Mobile_No</label>
-                                    </div>
-                                </div>
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="alternate_Mobile_No" name="alternate_Mobile_No"
-                                            class="form-control" value="<?php echo @$data['alternate_Mobile_No']; ?>">
-                                        <label class="form-label">Whatsapp No</label>
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="E_mail" name="E_mail" class="form-control"
-                                            value="<?php echo @$data['E_mail']; ?>">
-                                        <label class="form-label">E_mail</label>
-                                    </div>
-                                </div>
-
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Website" name="Website" class="form-control"
-                                            value="<?php echo @$data['Website']; ?>">
-                                        <label class="form-label">Website</label>
-                                    </div>
-                                </div>
-                             
-                             
-                              <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="oppaddress" name="oppaddress" class="form-control"
-                                            value="<?php echo @$data['oppaddress']; ?>">
-                                        <label class="form-label">Operating Address</label>
-                                    </div>
-                                </div>   
-                                                                                                                                                                
-                                
-                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="operation_city" name="operation_city" class="form-control"
-                                            value="<?php echo @$data['operation_city']; ?>">
-                                        <label class="form-label">Operating City</label>
-                                    </div>
-                                </div>  
-                                
-
-                                 <div class="form-group form-float">
-                                    <div class="form-line focused">                                       
-                                        <select id="operation_state" name="operation_state" class="form-control" >
-                                            <option checked disabled>Select Operating State</option>
-
-                                            <option value="<?php echo @$data['operation_state']; ?>"><?php echo @$data['operation_state']; ?>
-                                            </option>
-                                            <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `state`");
-                                            while($row= mysqli_fetch_assoc($dat)){
-                                            ?>
-                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?></option>
-                                            <?php } ?>
-                                        </select>
-                                        <label class="form-label">Select Operating State</label>
-                                    </div>
-                                </div> 
-                                
-
-                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="operation_pincode" name="operation_pincode" class="form-control"
-                                            value="<?php echo @$data['operation_pincode']; ?>">
-                                        <label class="form-label">Operating Pincode</label>
-                                    </div>
-                                </div>  
-                                
-
-                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="operation_panno" name="operation_panno" class="form-control"
-                                            value="<?php echo @$data['operation_panno']; ?>">
-                                        <label class="form-label">Operation PAN NO</label>
-                                    </div>
-                                </div>  
-                                
-                                                                                                                                                                   
-                                
-                                 <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Address" name="Address" class="form-control"
-                                            value="<?php echo @$data['Address']; ?>">
-                                        <label class="form-label">Address</label>
-                                    </div>
-                                </div>
-                              
-                                <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="City" name="City" class="form-control"
-                                            value="<?php echo @$data['City']; ?>">
-                                        <label class="form-label">City</label>
-                                    </div>
-                                </div>
-                                
-                                 <div class="form-group form-float">
-                                    <div class="form-line focused">                                       
-                                        <select id="State" name="State" class="form-control" >
-                                            <option checked disabled>Select State</option>
-
-                                            <option value="<?php echo @$data['State']; ?>"><?php echo @$data['State']; ?>
-                                            </option>
-                                            <?php 
-                                            $dat = mysqli_query($conn , "SELECT * FROM `state`");
-                                            while($row= mysqli_fetch_assoc($dat)){
-                                            ?>
-                                            <option value="<?php  echo $row['name']?>"><?php echo $row['name']?></option>
-                                            <?php } ?>
-                                        </select>
-                                        <label class="form-label">Select State</label>
-                                    </div>
-                                </div>
-
-                                    
                                     <div class="form-group form-float">
-                                    <div class="form-line">
-                                        <input type="text" id="Pin_Code" name="Pin_Code" class="form-control"
-                                            value="<?php echo @$data['Pin_Code']; ?>">
-                                        <label class="form-label">Pin_Code</label>
+                                        <div class="form-line">
+                                            <input type="text" id="Name" name="Name" class="form-control"
+                                                value="<?php echo @$data['Name']; ?>">
+                                            <label class="form-label">Company Name</label>
+                                        </div>
                                     </div>
-                                </div>
-                                                                                         
-                                
 
-                                <table class='table'>
-                                    <thead>
-                                        <tr>
-                                            <td>Contact person</td>
-                                            <td>Mobile</td>
-                                            <td>Email</td>
-                                            <td>Designation</td>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tbl">
-                                        <?php
+
+
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="State_Code" name="State_Code" class="form-control"
+                                                value="<?php echo @$data['State_Code']; ?>">
+                                            <label class="form-label">GSTIN</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="gstaddress" name="gstaddress" class="form-control"
+                                                value="<?php echo @$data['gstaddress']; ?>">
+                                            <label class="form-label">GST Address</label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="Mobile_No" name="Mobile_No" class="form-control"
+                                                value="<?php echo @$data['Mobile_No']; ?>">
+                                            <label class="form-label">Mobile_No</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="alternate_Mobile_No" name="alternate_Mobile_No"
+                                                class="form-control"
+                                                value="<?php echo @$data['alternate_Mobile_No']; ?>">
+                                            <label class="form-label">Whatsapp No</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="E_mail" name="E_mail" class="form-control"
+                                                value="<?php echo @$data['E_mail']; ?>">
+                                            <label class="form-label">E_mail</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="Website" name="Website" class="form-control"
+                                                value="<?php echo @$data['Website']; ?>">
+                                            <label class="form-label">Website</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="oppaddress" name="oppaddress" class="form-control"
+                                                value="<?php echo @$data['oppaddress']; ?>">
+                                            <label class="form-label">Operating Address</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="operation_city" name="operation_city"
+                                                class="form-control" value="<?php echo @$data['operation_city']; ?>">
+                                            <label class="form-label">Operating City</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line focused">
+                                            <select id="operation_state" name="operation_state" class="form-control">
+                                                <option checked disabled>Select Operating State</option>
+
+                                                <option value="<?php echo @$data['operation_state']; ?>">
+                                                    <?php echo @$data['operation_state']; ?>
+                                                </option>
+                                                <?php 
+                                            $dat = mysqli_query($conn , "SELECT * FROM `state`");
+                                            while($row= mysqli_fetch_assoc($dat)){
+                                            ?>
+                                                <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
+                                                </option>
+                                                <?php } ?>
+                                            </select>
+                                            <label class="form-label">Select Operating State</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="operation_pincode" name="operation_pincode"
+                                                class="form-control" value="<?php echo @$data['operation_pincode']; ?>">
+                                            <label class="form-label">Operating Pincode</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="operation_panno" name="operation_panno"
+                                                class="form-control" value="<?php echo @$data['operation_panno']; ?>">
+                                            <label class="form-label">Operation PAN NO</label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="Address" name="Address" class="form-control"
+                                                value="<?php echo @$data['Address']; ?>">
+                                            <label class="form-label">Address</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="City" name="City" class="form-control"
+                                                value="<?php echo @$data['City']; ?>">
+                                            <label class="form-label">City</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line focused">
+                                            <select id="State" name="State" class="form-control">
+                                                <option checked disabled>Select State</option>
+
+                                                <option value="<?php echo @$data['State']; ?>">
+                                                    <?php echo @$data['State']; ?>
+                                                </option>
+                                                <?php 
+                                            $dat = mysqli_query($conn , "SELECT * FROM `state`");
+                                            while($row= mysqli_fetch_assoc($dat)){
+                                            ?>
+                                                <option value="<?php  echo $row['name']?>"><?php echo $row['name']?>
+                                                </option>
+                                                <?php } ?>
+                                            </select>
+                                            <label class="form-label">Select State</label>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="Pin_Code" name="Pin_Code" class="form-control"
+                                                value="<?php echo @$data['Pin_Code']; ?>">
+                                            <label class="form-label">Pin_Code</label>
+                                        </div>
+                                    </div>
+
+
+
+                                    <table class='table'>
+                                        <thead>
+                                            <tr>
+                                                <td>Contact person</td>
+                                                <td>Mobile</td>
+                                                <td>Email</td>
+                                                <td>Designation</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbl">
+                                            <?php
 
                                         if (mysqli_fetch_row($company_employee_result) > 0) {
                                             $company_employee_result = mysqli_query($conn, "SELECT * FROM `company_employee` where `employee_ref_id`=$uid");
 
                                             while ($row = mysqli_fetch_assoc($company_employee_result)) { ?>
-                                        <tr>
-                                            <td><input class="form-control" type='text' name='employee_name[]'
-                                                    placeholder="employee_name" 
-                                                    value=<?= $row['employee_name'] ?>></td>
-                                            <td><input class="form-control" type='text' name='employee_number[]'
-                                                    placeholder="employee_number" 
-                                                    value=<?= $row['employee_email'] ?>></td>
-                                            <td><input class="form-control" type='text' name='employee_email[]'
-                                                    placeholder="employee_email" value="<?= $row['employee_email'] ?>">
-                                            </td>
-                                            <td><input class="form-control" type='text' name='employee_designation[]'
-                                                    placeholder="employee_designation" 
-                                                    value=<?= $row['employee_designation'] ?>></td>
-                                            <td><input class="btn btn-success btn-sm" type='button' value='+'
-                                                    onclick='add_row()'></td>
-                                            <td><input class="btn btn-danger btn-sm" type='button' value='-'
-                                                    onclick='remove_row(this)'></td>
-                                        </tr>
-                                        <?php }
+                                            <tr>
+                                                <td><input class="form-control" type='text' name='employee_name[]'
+                                                        placeholder="employee_name" value=<?= $row['employee_name'] ?>>
+                                                </td>
+                                                <td><input class="form-control" type='text' name='employee_number[]'
+                                                        placeholder="employee_number"
+                                                        value=<?= $row['employee_email'] ?>></td>
+                                                <td><input class="form-control" type='text' name='employee_email[]'
+                                                        placeholder="employee_email"
+                                                        value="<?= $row['employee_email'] ?>">
+                                                </td>
+                                                <td><input class="form-control" type='text'
+                                                        name='employee_designation[]' placeholder="employee_designation"
+                                                        value=<?= $row['employee_designation'] ?>></td>
+                                                <td><input class="btn btn-success btn-sm" type='button' value='+'
+                                                        onclick='add_row()'></td>
+                                                <td><input class="btn btn-danger btn-sm" type='button' value='-'
+                                                        onclick='remove_row(this)'></td>
+                                            </tr>
+                                            <?php }
                                         } else { ?>
-                                        <tr>
-                                            <td><input class="form-control" type='text' name='employee_name[]'
-                                                    placeholder="employee_name" 
-                                                    value=<?= $row['employee_name'] ?>></td>
-                                            <td><input class="form-control" type='text' name='employee_number[]'
-                                                    placeholder="employee_number" 
-                                                    value=<?= $row['employee_email'] ?>></td>
-                                            <td><input class="form-control" type='text' name='employee_email[]'
-                                                    placeholder="employee_email" value="<?= $row['employee_email'] ?>">
-                                            </td>
-                                            <td><input class="form-control" type='text' name='employee_designation[]'
-                                                    placeholder="employee_designation" 
-                                                    value=<?= $row['employee_designation'] ?>></td>
-                                            <td><input class="btn btn-success btn-sm" type='button' value='+'
-                                                    onclick='add_row()'></td>
-                                            <td><input class="btn btn-danger btn-sm" type='button' value='-'
-                                                    onclick='remove_row(this)'></td>
-                                        </tr>
-                                        <?php } ?>
-                                    </tbody>
-                                </table>
+                                            <tr>
+                                                <td><input class="form-control" type='text' name='employee_name[]'
+                                                        placeholder="employee_name" value=<?= $row['employee_name'] ?>>
+                                                </td>
+                                                <td><input class="form-control" type='text' name='employee_number[]'
+                                                        placeholder="employee_number"
+                                                        value=<?= $row['employee_email'] ?>></td>
+                                                <td><input class="form-control" type='text' name='employee_email[]'
+                                                        placeholder="employee_email"
+                                                        value="<?= $row['employee_email'] ?>">
+                                                </td>
+                                                <td><input class="form-control" type='text'
+                                                        name='employee_designation[]' placeholder="employee_designation"
+                                                        value=<?= $row['employee_designation'] ?>></td>
+                                                <td><input class="btn btn-success btn-sm" type='button' value='+'
+                                                        onclick='add_row()'></td>
+                                                <td><input class="btn btn-danger btn-sm" type='button' value='-'
+                                                        onclick='remove_row(this)'></td>
+                                            </tr>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
 
 
-                                <br />
+                                    <br />
 
-                                <button class="btn btn-primary waves-effect submit_sender" name="submit_sender"
-                                    type="submit">SUBMIT</button>
-                            </form>
+                                    <button class="btn btn-primary waves-effect submit_sender" name="submit_sender"
+                                        type="submit">SUBMIT</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Vertical Layout | With Floating Label -->
+
             </div>
-            <!-- Vertical Layout | With Floating Label -->
+        </section>
 
-        </div>
-    </section>
-
-    <?php include_once('includes/footer.php'); ?>
-</body>
-<script>
-function add_row() {
-    var tr = document.createElement("tr");
-    tr.innerHTML =
-        "<td><input type='text' class='form-control' placeholder='Contact person name' name='employee_name[]'  ></td> <td><input type='text'  placeholder='person phone' class='form-control' name='employee_number[]'  ></td> <td><input type='text'  placeholder='person phone2' class='form-control' name='employee_email[]'  ></td> <td><input type='text' class='form-control'  placeholder=' person Designation' name='employee_designation[]'  ></td> <td><input type='button' value='+' onclick='add_row()' class='btn btn-success btn-sm'></td> <td><input type='button' value='-' onclick='remove_row(this)' class='btn btn-danger btn-sm'></td>";
-    document.getElementById("tbl").appendChild(tr);
-}
-
-function remove_row(e) {
-    var n = document.querySelector("#tbl").querySelectorAll("tr").length;
-    if (n > 1 && confirm("Are You Sure") == true) {
-        var ele = e.parentNode.parentNode;
-        ele.remove();
+        <?php include_once('includes/footer.php'); ?>
+    </body>
+    <script>
+    function add_row() {
+        var tr = document.createElement("tr");
+        tr.innerHTML =
+            "<td><input type='text' class='form-control' placeholder='Contact person name' name='employee_name[]'  ></td> <td><input type='text'  placeholder='person phone' class='form-control' name='employee_number[]'  ></td> <td><input type='text'  placeholder='person phone2' class='form-control' name='employee_email[]'  ></td> <td><input type='text' class='form-control'  placeholder=' person Designation' name='employee_designation[]'  ></td> <td><input type='button' value='+' onclick='add_row()' class='btn btn-success btn-sm'></td> <td><input type='button' value='-' onclick='remove_row(this)' class='btn btn-danger btn-sm'></td>";
+        document.getElementById("tbl").appendChild(tr);
     }
-}
-</script>
+
+    function remove_row(e) {
+        var n = document.querySelector("#tbl").querySelectorAll("tr").length;
+        if (n > 1 && confirm("Are You Sure") == true) {
+            var ele = e.parentNode.parentNode;
+            ele.remove();
+        }
+    }
+    </script>
 
 </html>

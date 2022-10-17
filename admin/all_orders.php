@@ -15,7 +15,7 @@
                 
                 <?php
            
-              $query = "SELECT * FROM `orders`";
+              $query = "SELECT * FROM `student`";
 
               $fetched_data = mysqli_query($conn,$query);
 
@@ -35,24 +35,36 @@
                       <th scope="col">Medicine Name</th>
                       <th scope="col">Quantity</th>
                       <th scope="col">Total Price</th>
-                      <th scope="col">User Id</th>
-                      <th scope="col">Order Id</th>
+                      <th scope="col">Brand Name</th>
+                      <th scope="col">Total Amount</th>
+                      <th scope="col">Date</th>                      
                       <th scope="col">Transaction Id</th>                      
+                      <th scope="col">User Id</th>                      
+                      <th scope="col">Name</th>                      
+                      <th scope="col">Email</th>                      
+                      <th scope="col">Phone</th>                      
+                      
                     </tr>
                      </thead>
 
                     <?php
-                    $data = mysqli_query($conn,"SELECT * FROM `orders`");
+                    $data = mysqli_query($conn,"SELECT * FROM `student`");
                     while($all_rows = mysqli_fetch_assoc($data))
                       {                        
                       echo "<tr>
                               <td>$all_rows[id]</td>
-                              <td>$all_rows[medicine_name]</td>
-                              <td>$all_rows[quantity]</td>
+                              <td>$all_rows[student_name]</td>
+                              <td>$all_rows[phone_no]</td>
+                              <td>$all_rows[age]</td>
+                              <td>$all_rows[date_of_birth]</td>
                               <td>$all_rows[total_price]</td>
-                              <td>$all_rows[user_id]</td>
-                              <td>$all_rows[order_id]</td>
-                              <td>$all_rows[transaction_id]</td>                                                          
+                              <td>$all_rows[date]</td>                                                          
+                              <td>$all_rows[txn_id]</td>                                                          
+                              <td>$all_rows[random]</td>                                                          
+                              <td>$all_rows[fname]</td>                                                          
+                                                                                   
+                              <td>$all_rows[email]</td>                                                          
+                              <td>$all_rows[phone]</td>                                                          
                               
                           </tr>";                          
                       }
