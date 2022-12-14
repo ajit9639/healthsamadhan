@@ -8,12 +8,12 @@ if(isset($_SESSION['email'])){
 }
 
 if(isset($_POST['submit'])){
-  echo $number = $_POST['phone'];
-  echo $otp = $_POST['input_otp'];
-  echo $otp_check = $_SESSION['otp'];
-  exit;
-  
+  $number = $_POST['phone'];
+  $otp = $_POST['input_otp'];
+  $otp_check = $_SESSION['otp'];
   if($otp == $otp_check){
+    echo "inserted";
+    
   $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE  `phone_number`='$number' "));
 
     if($check == '1'){
