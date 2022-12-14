@@ -1,8 +1,6 @@
 
 <?php 
-
 include 'conn.php'; 
-
 if(isset($_SESSION['email'])){
     echo "<script>
     location.href = 'index.php';
@@ -25,14 +23,22 @@ if(isset($_POST['submit'])){
   $_SESSION['email'] = $getnm_my_email;
   $_SESSION['my_nm'] = $getnm_my;
 
+  echo "<pre>";
+  print_r($_SESSION);
+  print_r($_POST);
+  exit;
+  
 echo "<script>window.location.replace('index.php')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
 }
-}else{?>
+}else{ 
+    echo '
     <script>alert("invalid")</script>
-<?php 
+    ';
 }
+}else{
+    
 }
 ?>
 
