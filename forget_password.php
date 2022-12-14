@@ -5,34 +5,15 @@ if(isset($_SESSION['email'])){
     location.href = 'index.php';
     </script>";
 }
+
+
 global $conn ;
 function forget($email){
 $get = "SELECT * FROM `user_doctor` where `email`='$email'";
 $data = mysqli_query($conn , $get);
 $rows = mysqli_num_rows($data);
-if($rows > 0){
-    $mydata = mysqli_fetch_assoc($data);
-    $password = $mydata['password'];    
-    $msg = "Your Loin Password is".$password;
-    $send = mail($email, "Forget Password", $msg);
 
-}else{
-    echo "<script>
-    alert('No Data found');
-    </script>";
-}
-}
-
-
-
-
-if(isset($_POST['submit'])){
-  $email = $_POST['email'];
-  forget($email);
-//   $password = $_POST['password'];  
-//   $number = $_POST['phone'];
-
-  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email' AND `password`='$password' "));
+$check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email' AND `password`='$password' "));
     if($check == '1'){
     $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email'"));
     $getnm_my = $getnm['fname'];
@@ -46,6 +27,17 @@ echo "<script>window.location.replace('index.php')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
 }
+
+
+}
+
+
+
+
+if(isset($_POST['submit'])){
+  $email = $_POST['email'];
+  forget($email);
+  
 }
 ?>
 
