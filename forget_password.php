@@ -6,38 +6,29 @@ if(isset($_SESSION['email'])){
     </script>";
 }
 
+if(isset($_POST['submit'])){
+  $email = $_POST['email'];
+//   $password = $_POST['password'];
+  
+//   $number = $_POST['phone'];
 
-global $conn ;
-function forget($email){
-$get = "SELECT * FROM `user_doctor` where `email`='$email'";
-$data = mysqli_query($conn , $get);
-$rows = mysqli_num_rows($data);
-
-$check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email' AND `password`='$password' "));
+  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email' AND `password`='$password' "));
     if($check == '1'){
     $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email'"));
-    $getnm_my = $getnm['fname'];
+    $password = $getnm['password'];
+    $msg = "Your password is $password ";
+    mail($email,'Forget Password','$msg');
 
-  $_SESSION['myunique_id'] = $getnm['unique_id'];
-  $_SESSION['value'] = '1';
-  $_SESSION['email'] = $email;
-  $_SESSION['my_nm'] = $getnm_my;
+//   $getnm_my = $getnm['fname'];
+//   $_SESSION['myunique_id'] = $getnm['unique_id'];
+//   $_SESSION['value'] = '1';
+//   $_SESSION['email'] = $email;
+//   $_SESSION['my_nm'] = $getnm_my;
 
-echo "<script>window.location.replace('index.php')</script>";
+echo "<script>alert('Password has been sent to your registered mail id')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
 }
-
-
-}
-
-
-
-
-if(isset($_POST['submit'])){
-  $email = $_POST['email'];
-  forget($email);
-  
 }
 ?>
 
@@ -110,13 +101,13 @@ if(isset($_POST['submit'])){
                             <img src="./assets/img/logo.png" alt="">
                         </div>
                         <div class="col-md-12">
-                            <label for="email">Registered Email ID:</label>
+                            <label for="email">Email:</label>
                             <input type="email" class="form-control" placeholder="Enter email" name="email">
                         </div>
-                        <!-- <div class="col-md-12">
+                        <div class="col-md-12">
                             <label for="pwd">Password:</label>
                             <input type="password" class="form-control" placeholder="Enter Password" name="password">
-                        </div> -->
+                        </div>
 
                         <div class="col-md-12 mt-3">
                             Don't have an account ? <a href="register.php" class="">Register Here ?</a> 
@@ -124,7 +115,7 @@ if(isset($_POST['submit'])){
                         </div>
 
                         <div class="col-md-2 mt-3">
-                            <button type="submit" class="btn btn-info" name="submit">Submit</button>
+                            <button type="submit" class="btn btn-info" name="submit">Login</button>
                         </div>
 
                     </div>
