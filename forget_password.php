@@ -9,14 +9,27 @@ global $conn ;
 function forget($email){
 $get = "SELECT * FROM `user_doctor` where `email`='$email'";
 $data = mysqli_query($conn , $get);
-$mydata = mysqli_fetch_assoc($data);
+$rows = mysqli_num_rows($data);
+if($rows > 0){
+    $mydata = mysqli_fetch_assoc($data);
+    $password = $mydata['password'];    
+    $msg = "Your Loin Password is".$password;
+    $send = mail($email, "Forget Password", $msg);
 
+}else{
+    echo "<script>
+    alert('No Data found');
+    </script>";
 }
+}
+
+
+
 
 if(isset($_POST['submit'])){
   $email = $_POST['email'];
-  $password = $_POST['password'];
-  
+  forget($email);
+//   $password = $_POST['password'];  
 //   $number = $_POST['phone'];
 
   $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `email`='$email' AND `password`='$password' "));
