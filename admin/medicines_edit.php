@@ -28,7 +28,7 @@ if($del){
 
     if($ins){
         echo"<script>
-        alert('Registration Successfully');
+        alert('Medicine Updated Successfully');
         window.location.href='medicines_view.php';
         </script>";  
     }else{
@@ -77,21 +77,31 @@ if($del){
                             <input type="number" class="form-control" placeholder="Enter MRP" name="mrp"   value="<?= $check['mrp'] ?>" required>
                         </div>
 
-                        <div class="col-md-4">
-                            <label>Sale Price</label>
-                            <input type="number" class="form-control" placeholder="Enter Sale Price" name="sale"   value="<?= $check['sale'] ?>" required>
-                        </div>
-
-                        
-                        <!-- <div class="col-md-4">
-                            <label>QTY</label>
-                            <input type="number" class="form-control" placeholder="Enter QTY" name="qty"   value="<?= $check['qty'] ?>" required>
-                        </div> -->
+                      
                        
                         <div class="col-md-4">
                             <label>Brand</label>
-                            <input type="text" class="form-control" placeholder="Enter Brand" name="brand"  value="<?= $check['brand'] ?>"
-                                required>                            
+                            
+                            <?php
+                            $bid = $check['brand'];
+                            $brand = "SELECT * FROM `brand` where `sno`='$bid'";
+                            $bn = mysqli_query($conn , $brand);
+                            $getbrnm = mysqli_fetch_assoc($bn);
+                            $bnn = $getbrnm['brand_name'];
+                            ?>
+                            
+                             <select class="form-control" name="brand">
+                                <option value="<?= $check['brand'] ?>" selected disabled><?= $bnn ?></option>
+                                <?php 
+                                $brand = "SELECT * FROM `brand`";
+                                $data = mysqli_query($conn , $brand);
+                                while($row = mysqli_fetch_assoc($data)){
+                                ?>
+                                <option value="<?= $row['sno'] ?>"><?= $row['brand_name'] ?></option>
+                                <?php } ?>
+                            </select>
+                            
+                            <!--<input type="text" class="form-control" placeholder="Enter Brand" name="brand"  value="<?= $check['brand'] ?>" required>                            -->
                         </div>   
                                                                                     
                         <div class="col-md-2 mt-2">

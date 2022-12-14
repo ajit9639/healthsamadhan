@@ -32,6 +32,9 @@ include "aside_structure.php";
 
 $my_email = $_SESSION['email'];
 $get_user = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` where `email`='$my_email'"));
+$getmyid = $_SESSION['myunique_id'];
+$getmyname = $get_user['first_name'];
+
 $gt_user_id = $get_user['assigned_doctor'];
 
 $gt_diet = $get_user['assigned_dietition'];
@@ -84,6 +87,14 @@ $doc_health = $get_my_health['unique_id'];
     $ins1 = mysqli_query($conn, "INSERT INTO `messages_doctor`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc','$pac','$tt')");
     $ins2 = mysqli_query($conn, "INSERT INTO `messages_dietition`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc_diet','$pac_diet','$tt')");
     $ins3 = mysqli_query($conn, "INSERT INTO `messages_healthexpert`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc_health','$pac_health','$tt')");
+
+
+      // notification
+      $send_totification_doctor = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$gt_user_id','$getmyname')");
+      $send_totification_diet = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$gt_diet','$getmyname')");
+      $send_totification_health = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$gt_health','$getmyname')");
+  
+
 
         if($ins){
             echo "<script>alert('success')</script>";

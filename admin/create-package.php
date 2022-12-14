@@ -45,7 +45,7 @@
                       </div>
 
                       <div class="form-group col-lg-4">
-                        <label for="category_name">Enter Package Duration (Year)</label>
+                        <label for="category_name">Enter Package Duration (Month)</label>
                         <input type="number" class="form-control"  name="pack_duration" placeholder="Enter Package Duration" required>
                       </div>
 

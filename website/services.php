@@ -175,39 +175,7 @@
         <!--Insurance Page One End-->
 
         
-        <!--CTA One Start-->
-        <section class="cta-one cta-four">
-            <div class="cta-four-shape-1 float-bob-x">
-                <img src="assets/images/shapes/cta-four-shape-1.png" alt="">
-            </div>
-            <div class="container">
-                <div class="cta-one__content">
-                    <div class="cta-one__inner">
-                        <div class="cta-one__left">
-                            <h3 class="cta-one__title">Connect with us for free consultation</h3>
-                        </div>
-                        <div class="cta-one__right">
-                            <div class="cta-one__call">
-                                <div class="cta-one__call-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="cta-one__call-number">
-                                    <a href="tel:9200368090">+92 (003) 68-090</a>
-                                    <p>Call to Our Experts</p>
-                                </div>
-                            </div>
-                            <div class="cta-one__btn-box">
-                                <a href="contact.php" class="thm-btn cta-one__btn">Get a Quote</a>
-                            </div>
-                        </div>
-                        <div class="cta-one__img">
-                            <img src="assets/images/resources/cta-one-img.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!--CTA One End-->
+        
 
         <!--Counter One Start-->
         <Section class="counter-one">

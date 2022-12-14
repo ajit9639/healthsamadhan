@@ -3,16 +3,12 @@
 include "aside_structure.php";
 ?>
 
-<style>
-.appointment{
-    padding-top: 100px;
-}
-</style>
+
 
 <section class="appointment">
 <div class="container-fluid">
 
-<a href="book_appointment.php" class="btn btn-info">Book Appointment</a>
+<a href="book_appointment.php" class="btn btn-info mt-4">Book Appointment</a>
 
 <hr>
 <p>All My Apointment</p>

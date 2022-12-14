@@ -1,9 +1,19 @@
+<?php
+// session_start();
+// echo "<pre>";
+// print_r($_POST);
+// print_r($_SESSION);
+// exit;
+?>
+
+
 <style>
-    .dashboard-page{
-    background: url('assets/img/category/dr.png');
+.dashboard-page {
+    /* background: url('assets/img/category/dr.png'); */
+    background: #ccc;
     background-size: cover;
     padding: 35px 0px;
-    }
+}
 </style>
 
 <?php
@@ -40,13 +50,20 @@ include 'head.php' ;
 
 <body>
 
-   <?php include 'header.php' ?>
+    <?php include 'header.php' ?>
 
-   <?php include 'mobile-header.php' ?>
+    <?php include 'mobile-header.php' ?>
+
+    <!-- web view nav -->
+
+
+
+   
+
 
     <div class="dashboard-page">
         <div class="container-fluid">
-               
+
             <div class="row">
                 <div class="col-lg-3 col-6 mt-4">
                     <div class="product-brand">
@@ -78,7 +95,7 @@ include 'head.php' ;
                         </a>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-6 mt-4">
                     <div class="product-brand">
 
@@ -86,7 +103,7 @@ include 'head.php' ;
                             <img src="assets/img/category/chat_dr.png" class="" alt="">
                         </a>
                         <a href="doctor_chat/chat.php?user_id=<?= $x1?>" class="product-info">
-                            Chat with doctor 
+                            Chat with doctor
                         </a>
                     </div>
                 </div>
@@ -110,12 +127,11 @@ include 'head.php' ;
                         </a>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
 
-    
+
 
     <?php include 'footer.php' ?>
-

@@ -473,6 +473,8 @@
                             </div>
                         </div>
                     </div>
+
+                    
                     <div class="col-xl-6">
                         <div class="get-insurance__right">
                             <div class="section-title text-left">

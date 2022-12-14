@@ -2,11 +2,12 @@
 //session_start();
 include('../conn.php');
 if(isset($_POST['submit'])){
+  
   $random = rand(999,9999);
-  $_SESSION['random'] = $random;
       for($i=0;$i<count($_POST['slno']);$i++){
 
         $student_name = $_POST['student_name'][$i];
+        
         $phone_no = $_POST['phone_no'][$i];
         $age = $_POST['age'][$i];
         $date_of_birth = $_POST['date_of_birth'][$i];
@@ -83,10 +84,10 @@ if(isset($_POST['submit'])){
       <input type="text" class="form-control" placeholder="Enter Amount" name="amount" value="<?= $_POST['mytotalvalue'] ?>.00" readonly>
     </div>
 
-    <!-- <div class="form-group">
-      <label for="email">State:</label>
-      <input type="text" class="form-control" placeholder="Enter State" name="state">
-    </div> -->
+    <div class="form-group">
+      <!--<label for="email">Random:</label>-->
+      <input type="hidden" class="form-control" placeholder="Enter Random" name="udf1" value=<?= $random ?>>
+    </div>
     
     
     <button type="submit" class="btn btn-primary" name="pay">Pay Now</button>

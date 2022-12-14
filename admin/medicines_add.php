@@ -26,7 +26,7 @@
 
 
     if($ins){
-        $message[] = 'product add succesfully';;  
+        $message[] = 'Medicine add succesfully';;  
     }else{
         $message[] = 'could not add the product';  
     }
@@ -72,33 +72,27 @@
                             <label>MRP</label>
                             <input type="number" class="form-control" placeholder="Enter MRP" name="mrp"  required>
                         </div>
-
-                        <div class="col-md-4">
-                            <label>Sale Price</label>
-                            <input type="number" class="form-control" placeholder="Enter Sale Price" name="sale"  required>
-                        </div>
-
-                        
-                        <!-- <div class="col-md-4">
-                            <label>QTY</label>
-                            <input type="number" class="form-control" placeholder="Enter QTY" name="qty"  required>
-                        </div> -->
                        
                         <div class="col-md-4">
                             <label>Brand</label>
-                            <input type="text" class="form-control" placeholder="Enter Brand" name="brand"
-                                required>                            
+                            <!--<input type="text" class="form-control" placeholder="Enter Brand" name="brand"  required>  -->
+                            <select class="form-control" name="brand">
+                                <option value="" selected disabled>Select Brand</option>
+                                <?php 
+                                $brand = "SELECT * FROM `brand`";
+                                $data = mysqli_query($conn , $brand);
+                                while($row = mysqli_fetch_assoc($data)){
+                                ?>
+                                <option value="<?= $row['sno'] ?>"><?= $row['brand_name'] ?></option>
+                                <?php } ?>
+                            </select>
                         </div>   
 
-                        <!-- <div class="col-md-4">
-                            <label>Medicine Image</label>
-                            <input type="file" class="form-control"  name="medicine_image"
-                                required>                            
-                        </div>    -->
+                       
                                                 
                                     
                         <div class="col-md-2 mt-2">
-                            <button type="submit" class="btn btn-info" name="submit">Register</button>
+                            <button type="submit" class="btn btn-info" name="submit">Add</button>
                         </div>
                        
                     </div>

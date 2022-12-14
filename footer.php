@@ -2,13 +2,13 @@
     <div class="container-fluid theme-container">
         <div class="upper-footer">
             <div class="row justify-content-around">
-                <div class="col-lg-4 col-md-3 col-12">
+                <div class="col-md-3 col-12 pt-4">
                     <div class="widget">
                         <div class="footer-brand"><img src="assets/img/logo.png" alt=""></div>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 col-12 pt-4">
+                <div class="col-md-3 col-12 pt-4">
 
                     <div class="widget">
                         <div class="widget-title">
@@ -33,7 +33,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-12 pt-4">
+                <div class="col-md-3 col-12 pt-4">
                     <div class="widget">
                         <div class="widget-title">
                             <h3>Help</h3>
@@ -57,7 +57,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-12 pt-4">
+                <div class="col-md-3 col-12 pt-4">
                     <div class="widget">
                         <div class="widget-title">
                             <h3>Policy</h3>
@@ -81,30 +81,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3 col-12 pt-4">
-                    <div class="widget">
-                        <div class="widget-title">
-                            <h3>Social</h3>
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="#">Facebook</a>
-                            </li>
-                            <li>
-                                <a href="#">Google</a>
-                            </li>
-                            <li>
-                                <a href="#">Pinterest</a>
-                            </li>
-                            <li>
-                                <a href="#">Linkedin</a>
-                            </li>
-                            <li>
-                                <a href="#">Dribble</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+                
             </div>
 
         </div>
@@ -118,14 +95,10 @@
     font-weight: 800;
 ">
             <div class="row">
-                <div class="col-lg-6">
-                    <p class="site-footer__bottom-text" style="float: left;">© All Copyright 2022 by <a
-                            href="#">HealthSamadhan.com</a></p>
+                <div class="col-lg-12">
+                    <p class="site-footer__bottom-text" style="float: left;">Copyright © 2022 Health Samadhan</p>
                 </div>
-                <div class="col-lg-6">
-                    <p class="site-footer__bottom-text" style="float: right;">Powered by <a
-                            href="https://insightinfosystem.com">Insight Infosystem</a></p>
-                </div>
+              
             </div>
     </div>
     </section>

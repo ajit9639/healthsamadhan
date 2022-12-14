@@ -1,5 +1,7 @@
 <?php
 session_start();
+include "../../conn.php";
+// error_reporting(0);
 /*Note : After completing transaction process it is recommended to make an enquiry call with PayU to validate the response received and then save the response to DB or display it on UI*/
 
 // echo "<pre>";
@@ -31,22 +33,56 @@ hash = sha512(additionalCharges|SALT|status||||||udf5|||||email|firstname|produc
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
     $salt               =   'UkojH5TS';
+    
+    
+    
+    
+    
+
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
+	
 	$firstname    		= 	$postdata['firstname'];
+	$lastname    		= 	$postdata['lastname'];
 	$email        		=	$postdata['email'];
-	// $udf5				=   $postdata['udf5'];	
+    $phone              =   $postdata['phone'];
+    $address1           =   $postdata['address1'];
+    
+    $zipcode            =   $postdata['zipcode'] ;
+    $random             =  $postdata['udf1'];
+
 	$status				= 	$postdata['status'];
 	$resphash			= 	$postdata['hash'];
 	//Calculate response hash to verify	
 	// $keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|||||'.$udf5.'|||||';
-	$keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'||||||||||';
+	$keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|'.$phone.'|'.$address1.'|'.$zipcode.'|||||';
 	$keyArray 	  		= 	explode("|",$keyString);
 	$reverseKeyArray 	= 	array_reverse($keyArray);
 	$reverseKeyString	=	implode("|",$reverseKeyArray);
 	$CalcHashString 	= 	strtolower(hash('sha512', $salt.'|'.$status.'|'.$reverseKeyString)); //hash without additionalcharges
 	
+    $query = "UPDATE `student` SET `txn_id`='$txnid',`fname`='$firstname',`lname`='$lastname',`email`='$email',`phone`='$phone',`address`='$address1',`zip`='$zipcode',`status`='$status' WHERE `random`='$random'";
+    
+    
+    $result = mysqli_query($conn,$query);
+    if($result){
+
+echo "<script>        
+  alert('success');
+  const myTimeout = setTimeout(myGreeting, 800);
+  function myGreeting() {
+  location.replace('./../index.php');
+  }
+  </script>";
+  
+}else{
+        echo "<script>
+        // alert('failure');
+        location.replace('../../index.php');
+        </script>";
+    }
+
 	//check for presence of additionalcharges parameter in response.
 	$additionalCharges  = 	"";
 	

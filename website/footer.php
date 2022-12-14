@@ -47,8 +47,11 @@
                     <div class="footer-widget__column footer-widget__gallery clearfix">
                         <h3 class="footer-widget__title">Quick Links</h3>
                         <ul class=" list-unstyled clearfix">
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="services.php">Services</a></li>
+                            <li><a href="Privacy_policy.php">Privacy policy</a></li>
+                            <li><a href="shiping_policy.php">Shiping policy</a></li>
+                            <li><a href="Refund_and_return.php">Refund and return.php</a></li>
+
+                            
                             <li><a href="pricing.php">Plans</a></li>
                             <!-- <li><a href="">Privacy Policy</a></li>
                             <li><a href="">Terms of Use</a></li> -->
@@ -83,7 +86,7 @@
                                     <span class="icon-telephone"></span>
                                 </div>
                                 <div class="footer-widget__phone-text">
-                                    <a href="tel:9200368090">+9200368090</a>
+                                    <a href="tel:7488599544">7488599544</a>
                                     <p>Call to Our Experts</p>
                                 </div>
                             </div>
@@ -203,13 +206,10 @@
 <script src="assets/vendors/timepicker/timePicker.js"></script>
 <script src="assets/vendors/circleType/jquery.circleType.js"></script>
 <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
-
-    <!-- template js -->
-    <script src="assets/js/insur.js"></script>
-
-
-    <script src="./select_search/select.js"></script>
-    <link href="./select_search/select.css" rel="stylesheet" />
+<!-- template js -->
+<script src="assets/js/insur.js"></script>
+<script src="./select_search/select.js"></script>
+<link href="./select_search/select.css" rel="stylesheet" />
 
   
 

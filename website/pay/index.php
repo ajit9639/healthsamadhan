@@ -2,7 +2,7 @@
 // session_start();
 
 include "../../conn.php";
-error_reporting(0);
+// error_reporting(0);
 
 // print_r($_POST);
 // exit;
@@ -15,13 +15,12 @@ if(isset($_POST['pay'])){
     $number = $_POST['number'];
     $address = $_POST['address'];
     $amount = $_POST['amount'];
-	// $udf5 = 1;
-	$txn_id = rand(100000,9999999);
+	$udf1 = $_POST['udf1'];
+	$txn_id = rand(999,9999);
 	$product_info = "medicine";
 
-	$city = "Jamshedpur";
-	$state = "Jharkhand";
-	$country = "India";
+    // $query = "INSERT INTO `student`(`fname`, `lname`, `email`, `phone`, `address`) VALUES('$fname','$lname','$email','$number','$address') ";
+    // $query_succ = mysqli_query($conn , $query);
 }
 
 /*
@@ -38,10 +37,11 @@ POST URL: https://secure.payu.in/_payment
 
 //Unique merchant key provided by PayU along with salt. Salt is used for Hash signature 
 //calculation within application and must not be posted or transfered over internet. //-->
-$key="oZ7oo9";
-$salt="UkojH5TS";
+$key="EAaCkB";
+$salt="EIseBcWSUeDGFggSblZOQoaBKIaD9YBF";
+
 $_SESSION['salt'] = $salt;
-$action = 'https://test.payu.in/_payment';
+$action = 'https://secure.payu.in/_payment';
 
 $html = '';
 
@@ -74,12 +74,12 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 	//generate hash with mandatory parameters and udf5
 	// $hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$lname.'|'.$zip.'|'.$number.'|'.$address.'|'.$city.'|'.$state.'|'.$country.'|'.$email.'||||||'.$salt);
 
-	$hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$email.'|||||||||||'.$salt);
+	$hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$email.'|'.$udf1.'||||||||||'.$salt);
 		
 	$_SESSION['salt'] = $salt; //save salt in session to use during Hash validation in response
 	
 	$html = '<form action="'.$action.'" id="payment_form_submit" method="post">
-			<input type="hidden" id="udf5" name="udf5" value="'.$_POST['udf5'].'" />
+			
 			<input type="hidden" id="surl" name="surl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="furl" name="furl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="curl" name="curl" value="'.getCallbackUrl().'" />
@@ -93,11 +93,8 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 			<input type="hidden" id="email" name="email" value="'.$email.'" />
 			<input type="hidden" id="phone" name="phone" value="'.$number.'" />
 			<input type="hidden" id="address1" name="address1" value="'.$address.'" />
-			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />
-			<input type="hidden" id="city" name="city" value="'.$city.'" />
-			<input type="hidden" id="state" name="state" value="'.$state.'" />
-			<input type="hidden" id="country" name="country" value="'.$country.'" />
-			<input type="hidden" id="Pg" name="Pg" value="'.$_POST['Pg'].'" />
+			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />			
+			<input type="hidden" id="udf1" name="udf1" value="'.$_POST['udf1'].'" />
 			<input type="hidden" id="hash" name="hash" value="'.$hash.'" />
 			</form>
 			<script type="text/javascript"><!--
@@ -225,21 +222,7 @@ function getCallbackUrl()
 				<input type="text" id="address2" name="address2" placeholder="Address2" value="" /></span>
 			</div>
     
-			<div class="dv">
-				<span class="text"><label>City:</label></span>
-				<span>						
-				<input type="text" id="city" name="city" placeholder="City" value="" /></span>
-			</div>
-    
-			<div class="dv">
-				<span class="text"><label>State:</label></span>
-				<span><input type="text" id="state" name="state" placeholder="State" value="" /></span>
-			</div>
-    
-			<div class="dv">
-				<span class="text"><label>Country:</label></span>
-				<span><input type="text" id="country" name="country" placeholder="Country" value="" /></span>
-			</div>
+			
     
 			<div class="dv">
 				<span class="text"><label>PG:</label></span>

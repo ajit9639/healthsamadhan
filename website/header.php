@@ -94,7 +94,7 @@
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="main-menu__call-content">
-                                    <a href="tel:9200368090"> +9200368090 </a>
+                                    <a href="tel:7488599544"> 7488599544 </a>
                                     <p>Call to Our Experts</p>
                                 </div>
                             </div>

@@ -1,0 +1,124 @@
+[09-Nov-2022 08:48:31 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 08:48:31 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 09:01:32 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 09:01:32 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:03:29 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:03:29 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:05:34 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:05:34 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:06:19 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:06:19 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:10:34 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:10:34 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:11:13 UTC] PHP Warning:  include(../../conn.php): Failed to open stream: No such file or directory in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:11:13 UTC] PHP Warning:  include(): Failed opening '../../conn.php' for inclusion (include_path='.:/opt/cpanel/ea-php80/root/usr/share/pear') in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 4
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 33
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 43
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 136
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 145
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 146
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined variable $number in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 148
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 151
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 152
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 153
+[09-Nov-2022 12:13:49 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 154
+[09-Nov-2022 12:14:41 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 33
+[09-Nov-2022 12:14:41 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 43
+[09-Nov-2022 12:14:41 UTC] PHP Warning:  Undefined variable $conn in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 48
+[09-Nov-2022 12:14:41 UTC] PHP Fatal error:  Uncaught TypeError: mysqli_query(): Argument #1 ($mysql) must be of type mysqli, null given in /home/posigraph/public_html/hs/backup/health/package_pay/index.php:48
+Stack trace:
+#0 /home/posigraph/public_html/hs/backup/health/package_pay/index.php(48): mysqli_query(NULL, 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 48
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 33
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 43
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 134
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 143
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 144
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined variable $number in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 146
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 149
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 150
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 151
+[09-Nov-2022 12:15:02 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 152
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 30
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 40
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 132
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 141
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 142
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 147
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 148
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 149
+[09-Nov-2022 12:17:27 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 150
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 31
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 41
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 133
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 142
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 143
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 148
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 149
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 150
+[09-Nov-2022 12:18:22 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 151
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 134
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 143
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 144
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 149
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 150
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 151
+[09-Nov-2022 12:21:51 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 152
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 134
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 143
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 144
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 149
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 150
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 151
+[10-Nov-2022 05:47:20 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/hs/backup/health/package_pay/index.php on line 152
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/health/package_pay/index.php on line 131
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/health/package_pay/index.php on line 140
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/health/package_pay/index.php on line 141
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/health/package_pay/index.php on line 146
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/health/package_pay/index.php on line 147
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/health/package_pay/index.php on line 148
+[10-Nov-2022 05:49:53 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/health/package_pay/index.php on line 149
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/health/package_pay/index.php on line 131
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/health/package_pay/index.php on line 140
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/health/package_pay/index.php on line 141
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/health/package_pay/index.php on line 146
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/health/package_pay/index.php on line 147
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/health/package_pay/index.php on line 148
+[12-Nov-2022 07:08:51 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/health/package_pay/index.php on line 149
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined array key "udf5" in /home/posigraph/public_html/health/package_pay/index.php on line 131
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined variable $lname in /home/posigraph/public_html/health/package_pay/index.php on line 140
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined variable $zip in /home/posigraph/public_html/health/package_pay/index.php on line 141
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined variable $city in /home/posigraph/public_html/health/package_pay/index.php on line 146
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined variable $state in /home/posigraph/public_html/health/package_pay/index.php on line 147
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined variable $country in /home/posigraph/public_html/health/package_pay/index.php on line 148
+[12-Nov-2022 07:10:14 UTC] PHP Warning:  Undefined array key "Pg" in /home/posigraph/public_html/health/package_pay/index.php on line 149
+[08-Dec-2022 06:32:33 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 23
+[08-Dec-2022 06:32:33 UTC] PHP Warning:  Undefined array key "productinfo" in /home/posigraph/public_html/health/package_pay/index.php on line 25
+[08-Dec-2022 06:32:33 UTC] PHP Warning:  Undefined array key "firstname" in /home/posigraph/public_html/health/package_pay/index.php on line 26
+[08-Dec-2022 06:32:33 UTC] PHP Warning:  Undefined array key "lastname" in /home/posigraph/public_html/health/package_pay/index.php on line 27
+[08-Dec-2022 06:32:33 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 32
+[08-Dec-2022 06:34:11 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 23
+[08-Dec-2022 06:34:11 UTC] PHP Warning:  Undefined array key "productinfo" in /home/posigraph/public_html/health/package_pay/index.php on line 25
+[08-Dec-2022 06:34:11 UTC] PHP Warning:  Undefined array key "firstname" in /home/posigraph/public_html/health/package_pay/index.php on line 26
+[08-Dec-2022 06:34:11 UTC] PHP Warning:  Undefined array key "lastname" in /home/posigraph/public_html/health/package_pay/index.php on line 27
+[08-Dec-2022 06:34:11 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 32
+[08-Dec-2022 08:39:16 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 23
+[08-Dec-2022 08:39:16 UTC] PHP Warning:  Undefined array key "productinfo" in /home/posigraph/public_html/health/package_pay/index.php on line 25
+[08-Dec-2022 08:39:16 UTC] PHP Warning:  Undefined array key "firstname" in /home/posigraph/public_html/health/package_pay/index.php on line 26
+[08-Dec-2022 08:39:16 UTC] PHP Warning:  Undefined array key "lastname" in /home/posigraph/public_html/health/package_pay/index.php on line 27
+[08-Dec-2022 08:39:16 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 32
+[08-Dec-2022 09:05:21 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 23
+[08-Dec-2022 09:05:21 UTC] PHP Warning:  Undefined array key "productinfo" in /home/posigraph/public_html/health/package_pay/index.php on line 25
+[08-Dec-2022 09:05:21 UTC] PHP Warning:  Undefined array key "firstname" in /home/posigraph/public_html/health/package_pay/index.php on line 26
+[08-Dec-2022 09:05:21 UTC] PHP Warning:  Undefined array key "lastname" in /home/posigraph/public_html/health/package_pay/index.php on line 27
+[08-Dec-2022 09:05:21 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 32
+[08-Dec-2022 09:05:35 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 23
+[08-Dec-2022 09:05:35 UTC] PHP Warning:  Undefined array key "amount" in /home/posigraph/public_html/health/package_pay/index.php on line 24
+[08-Dec-2022 09:05:35 UTC] PHP Warning:  Undefined array key "productinfo" in /home/posigraph/public_html/health/package_pay/index.php on line 25
+[08-Dec-2022 09:05:35 UTC] PHP Warning:  Undefined array key "firstname" in /home/posigraph/public_html/health/package_pay/index.php on line 26
+[08-Dec-2022 09:05:35 UTC] PHP Warning:  Undefined array key "lastname" in /home/posigraph/public_html/health/package_pay/index.php on line 27
+[08-Dec-2022 09:05:35 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 32
+[08-Dec-2022 09:08:07 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 23
+[08-Dec-2022 09:08:07 UTC] PHP Warning:  Undefined array key "productinfo" in /home/posigraph/public_html/health/package_pay/index.php on line 25
+[08-Dec-2022 09:08:07 UTC] PHP Warning:  Undefined array key "txnid" in /home/posigraph/public_html/health/package_pay/index.php on line 32

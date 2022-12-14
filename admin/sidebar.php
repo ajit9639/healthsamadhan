@@ -72,7 +72,8 @@
 
                 <li class="nav-item"> <a class="nav-link" href="health_expert_registration.php">Add Health Expert</a></li>
                 <li class="nav-item"> <a class="nav-link" href="health_expert_view.php">View all Health Expert</a></li>
-                <li class="nav-item"> <a class="nav-link" href="view_user.php">View Users</a></li>
+                <li class="nav-item"> <a class="nav-link" href="view_user.php"> Users Assign</a></li>
+                <li class="nav-item"> <a class="nav-link" href="view_user1.php">View Users</a></li>
 
                 
               </ul>
@@ -105,6 +106,10 @@
             </a>
             <div class="collapse" id="medicines">
               <ul class="nav flex-column sub-menu">
+                
+                <li class="nav-item"> <a class="nav-link" href="create_brand.php">Add Brand</a></li>
+                <li class="nav-item"> <a class="nav-link" href="view_brand.php">View Brand</a></li>
+                
                 <li class="nav-item"> <a class="nav-link" href="medicines_add.php">Add Medicines</a></li>
                 <li class="nav-item"> <a class="nav-link" href="medicines_view.php">View Medicines</a></li>
               </ul>
@@ -168,7 +173,6 @@
             <div class="collapse" id="orders">
               <ul class="nav flex-column sub-menu">
                 <li class="nav-item"> <a class="nav-link" href="all_orders.php">All Orders</a></li>
-                <!-- <li class="nav-item"> <a class="nav-link" href="view_edu_vid_cat.php">Pending Orders</a></li>                 -->
               </ul>
             </div>
           </li>

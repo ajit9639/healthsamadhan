@@ -8,6 +8,7 @@
         if(!empty($message)){
             $sql = mysqli_query($conn, "INSERT INTO `messages_healthexpert` (incoming_msg_id, outgoing_msg_id, msg)
                                         VALUES ({$incoming_id}, {$outgoing_id}, '{$message}')") or die();
+                                        $send_totification_dietition = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES({$outgoing_id},{$incoming_id},'{$message}')");
         }
     }else{
         header("location: ../login.php");

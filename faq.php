@@ -27,9 +27,7 @@ include "aside_structure.php";
   background-color: white;
   overflow: hidden;
 }
-.accordians{
-padding-top: 100px;
-}
+
 </style>
 </head>
 <body>

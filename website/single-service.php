@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <?php include 'head.php' ?>
 
 <body class="custom-cursor">
@@ -35,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="portfolio-details__content">
                     <div class="row">
                         <div class="col-xl-8 col-lg-8">
@@ -44,22 +44,27 @@
                                 <p class="portfolio-details__text-2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, humour and the like.</p>
                             </div>
                         </div>
+
                         <div class="col-xl-4 col-lg-4">
                             <div class="portfolio-details__content-right">
                                 <div class="portfolio-details__details-box">
                                     <ul class="list-unstyled portfolio-details__details-list">
+
                                         <li>
                                             <p class="portfolio-details__client">Clients:</p>
                                             <h4 class="portfolio-details__name">Jessica Brown</h4>
                                         </li>
+
                                         <li>
                                             <p class="portfolio-details__client">Category:</p>
                                             <h4 class="portfolio-details__name">Insurance, Policies</h4>
                                         </li>
+
                                         <li>
                                             <p class="portfolio-details__client">Date:</p>
                                             <h4 class="portfolio-details__name">20 March, 2022</h4>
                                         </li>
+
                                         <li>
                                             <div class="portfolio-details__social">
                                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -68,6 +73,7 @@
                                                 <a href="#"><i class="fab fa-instagram"></i></a>
                                             </div>
                                         </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -84,12 +90,14 @@
             <div class="cta-four-shape-1 float-bob-x">
                 <img src="assets/images/shapes/cta-four-shape-1.png" alt="">
             </div>
+
             <div class="container">
                 <div class="cta-one__content">
                     <div class="cta-one__inner">
                         <div class="cta-one__left">
                             <h3 class="cta-one__title">Connect with us for free consultation</h3>
                         </div>
+
                         <div class="cta-one__right">
                             <div class="cta-one__call">
                                 <div class="cta-one__call-icon">
@@ -100,13 +108,16 @@
                                     <p>Call to Our Experts</p>
                                 </div>
                             </div>
+
                             <div class="cta-one__btn-box">
                                 <a href="contact.php" class="thm-btn cta-one__btn">Get a Quote</a>
                             </div>
                         </div>
+
                         <div class="cta-one__img">
                             <img src="assets/images/resources/cta-one-img.png" alt="">
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -121,8 +132,10 @@
             <div class="counter-one-shape-2 float-bob-y">
                 <img src="assets/images/shapes/counter-one-shape-2.png" alt="">
             </div>
+
             <div class="container">
                 <div class="row">
+
                     <!--Counter One Single Start-->
                     <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                         <div class="counter-one__single">
@@ -141,6 +154,8 @@
                         </div>
                     </div>
                     <!--Counter One Single End-->
+
+
                     <!--Counter One Single Start-->
                     <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
                         <div class="counter-one__single">
@@ -159,6 +174,8 @@
                         </div>
                     </div>
                     <!--Counter One Single End-->
+
+
                     <!--Counter One Single Start-->
                     <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                         <div class="counter-one__single">
@@ -177,6 +194,7 @@
                         </div>
                     </div>
                     <!--Counter One Single End-->
+
                     <!--Counter One Single Start-->
                     <div class="col-xl-3 col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
                         <div class="counter-one__single">
@@ -195,13 +213,12 @@
                         </div>
                     </div>
                     <!--Counter One Single End-->
+
                 </div>
             </div>
         </Section>
         <!--Counter One End-->
-
         
-
         <?php include 'footer.php' ?>
 </body>
 

@@ -50,7 +50,7 @@
                                 </div>
                                 <div class="contact-page__call-email-content">
                                     <h4>
-                                        <a href="tel:9200368090" class="contact-page__call-number"> +9200368090 </a>
+                                        <a href="tel:7488599544" class="contact-page__call-number"> 7488599544 </a>
                                         <a href="mailto:info@healthsamadhan.com" class="contact-page__email">info@healthsamadhan.com</a>
                                     </h4>
                                 </div>
@@ -121,7 +121,7 @@ Sakchi, Jamshedpur</p>
                                     <i class="fas fa-phone"></i>
                                 </div>
                                 <div class="cta-one__call-number">
-                                    <a href="tel:9200368090">+92 (003) 68-090</a>
+                                    <a href="tel:7488599544">7488599544</a>
                                     <p>Call to Our Experts</p>
                                 </div>
                             </div>

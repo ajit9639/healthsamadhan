@@ -1,28 +1,63 @@
 <?php
-// session_start();
 
-include "../../conn.php";
-error_reporting(0);
+	include "./../conn.php";
+    if(isset($_POST['registration_pay'])){        
+		
+// 		echo "<pre>";
+// 		print_r($_POST);
+// 		exit;
+		
+    $date = $_POST['date'];
+    $height = $_POST['height'];
+    $weight = $_POST['weight'];
+    $age = $_POST['age'];
+    $mother_tongue = $_POST['mother_tongue'];
+    $marital_status = $_POST['marital_status'];
+    $monthly_income = $_POST['monthly_income'];
+    $education = $_POST['education'];
+	$address = $_POST['address'];
 
-// print_r($_POST);
-// exit;
-
-if(isset($_POST['pay'])){
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $zip = $_POST['zip'];
-    $email = $_POST['email'];
-    $number = $_POST['number'];
-    $address = $_POST['address'];
+    $assigned_doctor = 'not assigned';
+    $assigned_dietition = 'not assigned';
+    $assigned_healthexpert = 'not assigned';
+    $user_status = 'unactive';
+    
+    $image_data = "";
+    
+    $txn_id = $_POST['txnid'];
     $amount = $_POST['amount'];
-	// $udf5 = 1;
-	$txn_id = rand(100000,9999999);
-	$product_info = "package";
+    $product_info = $_POST['productinfo'];
+    $fname = $_POST['firstname'];
+    $lname = $_POST['lastname'];
+    $email = $_POST['email'];
+    $number = $_POST['phone'];
+	$password = $_POST['password'];
+	$gender = $_POST['gender'];
+    $rand_id = $_POST['txnid'];
+    $check = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email'"));
+    if($check > 0){
+      echo "<script>alert('You have already registered')</script>";
+    }else{
+    
+        // $cont_dr = mysqli_fetch_assoc(mysqli_query($conn , "SELECT COUNT('id') as `cid` FROM `user_doctor`"));
+        // $x = $cont_dr['cid'];
+        // $y = $x + 2;
+        // $z = $y;
+        
+        // $ins1 = mysqli_query($conn , "INSERT INTO `user_doctor`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
+        // $ins2 = mysqli_query($conn , "INSERT INTO `user_diet`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
+        // $ins3 = mysqli_query($conn , "INSERT INTO `user_healthexpert`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
 
-	$city = "Jamshedpur";
-	$state = "Jharkhand";
-	$country = "India";
-}
+    $ins = mysqli_query($conn , "INSERT INTO `signup`(`first_name`, `last_name`, `gender`, `phone_number`, `password` ,`email`, `address`, `dob`, `height`, `weight`, `age`, `mother_tongue`, `marital_status`, `monthly_income`, `education`,`package_name`,`package_amount`,`rand_id`, `assigned_doctor`, `assigned_dietition`, `assigned_healthexpert`, `user_status`) VALUES ('$fname','$lname','$gender','$number','$password','$email','$address','$date','$height','$weight','$age','$mother_tongue','$marital_status','$monthly_income','$education','$product_info','$amount','$rand_id','$assigned_doctor','$assigned_dietition','$assigned_healthexpert','$user_status')");
+    if($ins){
+        echo"";  
+    }else{
+        echo"<script>alert('Invalid credential');
+        </script>";  
+    }
+    }
+    }
+
 
 /*
 Note : It is recommended to fetch all the parameters from your Database rather than posting static values or entering them on the UI.
@@ -38,11 +73,12 @@ POST URL: https://secure.payu.in/_payment
 
 //Unique merchant key provided by PayU along with salt. Salt is used for Hash signature 
 //calculation within application and must not be posted or transfered over internet. //-->
-$key="oZ7oo9";
-$salt="UkojH5TS";
-// $_SESSION['salt'] = $salt;
 
-$action = 'https://test.payu.in/_payment';
+$key="EAaCkB";
+$salt="EIseBcWSUeDGFggSblZOQoaBKIaD9YBF";
+
+$_SESSION['salt'] = $salt;
+$action = 'https://secure.payu.in/_payment';
 
 $html = '';
 
@@ -80,7 +116,7 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 	$_SESSION['salt'] = $salt; //save salt in session to use during Hash validation in response
 	
 	$html = '<form action="'.$action.'" id="payment_form_submit" method="post">
-			<input type="hidden" id="udf5" name="udf5" value="'.$_POST['udf5'].'" />
+			
 			<input type="hidden" id="surl" name="surl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="furl" name="furl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="curl" name="curl" value="'.getCallbackUrl().'" />
@@ -89,25 +125,20 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 			<input type="hidden" id="amount" name="amount" value="'.$amount.'" />
 			<input type="hidden" id="productinfo" name="productinfo" value="'.$product_info.'" />
 			<input type="hidden" id="firstname" name="firstname" value="'.$fname.'" />
-			<input type="hidden" id="Lastname" name="Lastname" value="'.$lname.'" />
-			<input type="hidden" id="Zipcode" name="Zipcode" value="'.$zip.'" />
+			<input type="hidden" id="Lastname" name="Lastname" value="'.$lname.'" />			
 			<input type="hidden" id="email" name="email" value="'.$email.'" />
 			<input type="hidden" id="phone" name="phone" value="'.$number.'" />
 			<input type="hidden" id="address1" name="address1" value="'.$address.'" />
-			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />
-			<input type="hidden" id="city" name="city" value="'.$city.'" />
-			<input type="hidden" id="state" name="state" value="'.$state.'" />
-			<input type="hidden" id="country" name="country" value="'.$country.'" />
-			<input type="hidden" id="Pg" name="Pg" value="'.$_POST['Pg'].'" />
+			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />						
 			<input type="hidden" id="hash" name="hash" value="'.$hash.'" />
 			</form>
-			<script type="text/javascript"><!--
+			<script type="text/javascript">
 				document.getElementById("payment_form_submit").submit();	
-			//-->
+			
 			</script>';
 	
 }
- 
+  
 //This function is for dynamically generating callback url to be postd to payment gateway. Payment response will be
 //posted back to this url. 
 function getCallbackUrl()

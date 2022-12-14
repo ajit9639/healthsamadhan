@@ -1,4 +1,30 @@
-<?php include "header.php";?>
+<?php 
+include "header.php";
+include "./php-framwork/methods/pagination.php";
+include "./php-framwork/methods/search_data.php";
+
+// pagination
+$condition1 = 1;
+$limit = 10;
+if (isset($_GET["page"])) {
+    $page  = $_GET["page"];
+} else {
+    $page = 1;
+    unset($_SESSION['condition']);
+};
+$start_from = ($page - 1) * $limit;
+$s_no = $start_from + 1;
+$condition = '1 LIMIT ' . $start_from . ',' . $limit;
+if (isset($_SESSION['condition'])) {
+    if ($_SESSION['condition'] != '') {
+        $condition = $_SESSION['condition'] . '  LIMIT ' . $start_from . ',' . $limit;
+        $condition1 = $_SESSION['condition'];
+    } else {
+        $condition = '1 LIMIT ' . $start_from . ',' . $limit;
+    }
+}
+// pagination end
+?>
 
 <div class="container-fluid page-body-wrapper">
 
@@ -24,6 +50,7 @@
           {            
             ?>
                             <div class="table-responsive pt-3">
+                                
                                 <table class="table table-bordered">
                                     <thead>
                                         <tr>
@@ -34,20 +61,27 @@
                                             <th scope="col">package_name</th>
                                             <th scope="col">package_amount</th>
                                             
-                                            <th scope="col">payment_status</th>
+                                            
                                             <th scope="col">Assign Doctor</th>
                                             <th scope="col">Assign Health Expert</th>
                                             <th scope="col">Assign Dietition</th>
+                                            <th scope="col">Account Status</th>
                                             
                                             
+                                            <th scope="col">Trans Id</th>
+                                            <th scope="col">Trans Status</th>
+                                            <th scope="col">Trans Date</th>
+
+
                                         </tr>
                                     </thead>
                                     <?php
-                                    $data = mysqli_query($conn,"SELECT * FROM `signup`");
+                                    $s = 1;
+                                    $data = mysqli_query($conn,"SELECT * FROM `signup` where $condition");
                                     while($all_rows = mysqli_fetch_assoc($data))
                                       {?>                    
                          <tr>
-                          <td><?= $all_rows['id'] ?></td>
+                          <td><?= $s ?></td>
                           <td><?= $all_rows['first_name'] ?></td>
                           <td><?= $all_rows['phone_number'] ?></td>
                           <td> <?php
@@ -55,7 +89,7 @@
                           $d = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `package` where `id`='$d1'"));
                           echo $d['package_name']?></td>                          
                           <td><?= $all_rows['package_amount'] ?></td>                                                                           
-                          <td><?= $all_rows['user_status'] ?></td>
+                          
 
 
 
@@ -64,6 +98,7 @@
                           <option>
                             <?php
                             $d1 = $all_rows['assigned_doctor'];
+                            
                             $d = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` where `user_id`='$d1'"));
                             echo $d['fname'].' '.$d['lname'];
                             ?>
@@ -114,18 +149,41 @@
                           </select>
                           </td>
                                                    
+                          <td>
+                          <select  onchange="location = this.value;">
+                              <option selected disabled><?= $all_rows['user_status'] ?></option>
+                              <option value="user_activation.php?status=active && id=<?= $all_rows['id'] ?>">Active</option>
+                              <option value="user_activation.php?status=unactive && id=<?= $all_rows['id'] ?>">Unactive</option>
+                          </select>
                           
+                          </td>
+
+                          <td>  <?= $all_rows['tranx_id'] ?></td>
+
+
+                          <td><?php
+                          $status = $all_rows['tranx_status'];
+                            if($status == 'failure'){
+                              echo '<span class="btn btn-danger">Failer</span>';
+                            }else{
+                              echo '<span class="btn btn-success">Success</span>';
+                            }
+                          ?></td>
 
                           
+                          <td><?= $all_rows['tranx_date'] ?></td>
                           
                       </tr>
                       <?php 
-                  }
+                 $s++; }
               }
 
               else
                 echo('no records found');
-
+                 ?>
+                </table>
+                <?php
+                paginate('signup',$limit,'view_user.php');
                 include "footer.php";
 
               ?>

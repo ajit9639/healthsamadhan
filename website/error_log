@@ -94,3 +94,11 @@ Stack trace:
 #0 /home/posigraph/public_html/app/health/website/pricing.php(57): mysqli_query(NULL, 'SELECT * FROM `...')
 #1 {main}
   thrown in /home/posigraph/public_html/app/health/website/pricing.php on line 57
+[08-Nov-2022 08:46:03 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/app/backup/health/website/buy_package.php on line 52
+[08-Nov-2022 08:46:03 UTC] PHP Warning:  Undefined array key "package_name" in /home/posigraph/public_html/app/backup/health/website/buy_package.php on line 57
+[08-Nov-2022 08:47:30 UTC] PHP Warning:  Undefined array key "package_amount" in /home/posigraph/public_html/app/backup/health/website/buy_package.php on line 52
+[08-Nov-2022 08:47:30 UTC] PHP Warning:  Undefined array key "package_name" in /home/posigraph/public_html/app/backup/health/website/buy_package.php on line 57
+[26-Nov-2022 06:44:46 UTC] PHP Warning:  Undefined array key "random" in /home/posigraph/public_html/health/website/checkout.php on line 6
+[26-Nov-2022 06:52:08 UTC] PHP Warning:  Undefined array key "random" in /home/posigraph/public_html/health/website/checkout.php on line 6
+[26-Nov-2022 06:54:42 UTC] PHP Warning:  Undefined array key "random" in /home/posigraph/public_html/health/website/checkout.php on line 6
+[26-Nov-2022 06:59:30 UTC] PHP Warning:  Undefined array key "random" in /home/posigraph/public_html/health/website/checkout.php on line 6

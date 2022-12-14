@@ -1,11 +1,14 @@
 <?php
-session_start();
+include "./../conn.php";
+// session_start();
+/*Note : After completing transaction process it is recommended to make an enquiry call with PayU to validate the response received and then save the response to DB or display it on UI*/
 
 // echo "<pre>";
+// print_r($_POST);
 // print_r($_SESSION);
 // exit;
 
-/*Note : After completing transaction process it is recommended to make an enquiry call with PayU to validate the response received and then save the response to DB or display it on UI*/
+// $rand = $_SESSION['[random]'];
 
 $postdata = $_POST;
 $msg = '';
@@ -26,22 +29,20 @@ With additional charges -
 hash = sha512(additionalCharges|SALT|status||||||udf5|||||email|firstname|productinfo|amount|txnid|key)
 
 */
-
-// echo "<pre>";
-// print_r($_POST);
-// exit;
-
-
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
     $salt               =   'UkojH5TS';
+
 	$txnid 				= 	$postdata['txnid'];
+    $status				= 	$postdata['status'];
+    $addedon		    = 	date('Y-m-d');
+
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
 	$firstname    		= 	$postdata['firstname'];
 	$email        		=	$postdata['email'];
 	// $udf5				=   $postdata['udf5'];	
-	$status				= 	$postdata['status'];
+	
 	$resphash			= 	$postdata['hash'];
 	//Calculate response hash to verify	
 	// $keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|||||'.$udf5.'|||||';
@@ -51,6 +52,39 @@ if (isset($postdata ['key'])) {
 	$reverseKeyString	=	implode("|",$reverseKeyArray);
 	$CalcHashString 	= 	strtolower(hash('sha512', $salt.'|'.$status.'|'.$reverseKeyString)); //hash without additionalcharges
 	
+
+
+
+    // update
+    $first_name = $_POST['firstname'];
+    $last_name = $_POST['lastname'];
+    $email = $_POST['email'];
+    $password = 123456;
+    $image_data = 'img';
+    
+        $cont_dr = mysqli_fetch_assoc(mysqli_query($conn , "SELECT COUNT('id') as `cid` FROM `user_doctor`"));
+        $x = $cont_dr['cid'];
+        $y = $x + 2;
+        $z = $y;
+        
+        $ins1 = mysqli_query($conn , "INSERT INTO `user_doctor`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
+        $ins2 = mysqli_query($conn , "INSERT INTO `user_diet`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
+        $ins3 = mysqli_query($conn , "INSERT INTO `user_healthexpert`(`unique_id`, `fname`, `lname`, `email`, `password`, `img`, `status`,`i_am`) VALUES('$z','$first_name','$last_name','$email','$password','$image_data','Offline now','user')");
+        
+        // echo "UPDATE `signup` SET `tranx_id`='$txnid',`tranx_status`='$status',`tranx_date`='$addedon' WHERE `tranx_id`='$txnid'";exit;
+
+        $upd = mysqli_query($conn , "UPDATE `signup` SET `tranx_id`='$txnid',`tranx_status`='$status',`tranx_date`='$addedon' WHERE `rand_id`='$txnid'");
+        
+                echo "<script>        
+                  alert('success');
+                  const myTimeout = setTimeout(myGreeting, 800);
+                  function myGreeting() {
+                  location.replace('./../index.php');
+                  }
+                  </script>";
+    // -- update
+
+
 	//check for presence of additionalcharges parameter in response.
 	$additionalCharges  = 	"";
 	
@@ -65,7 +99,9 @@ if (isset($postdata ['key'])) {
 		//Do success order processing here...
 		//Additional step - Use verify payment api to double check payment.
 		if(verifyPayment($key,$salt,$txnid,$status))
+                           
 			$msg = "Transaction Successful, Hash Verified...Payment Verified...";
+           
 		else
 			$msg = "Transaction Successful, Hash Verified...Payment Verification failed...";
 	}
@@ -113,9 +149,8 @@ function verifyPayment($key,$salt,$txnid,$status)
 		curl_close($c);
 		
 		/*
-		Here is json response example - 
+		Here is json response example -
 		
-
 		{"status":1,
 		"msg":"1 out of 1 Transactions Fetched Successfully",
 		"transaction_details":</strong>
@@ -193,7 +228,6 @@ function verifyPayment($key,$salt,$txnid,$status)
 <title>PayUBiz PHP7 Kit</title>
 </head>
 <style type="text/css">
-
 	.main {
 		margin-left:30px;
 		font-family:Verdana, Geneva, sans-serif, serif;
@@ -212,7 +246,6 @@ function verifyPayment($key,$salt,$txnid,$status)
 		border-style:solid; 
 		border-width:1px; 
 	}
-
 </style>
 <body>
 <div class="main">
@@ -476,8 +509,6 @@ function verifyPayment($key,$salt,$txnid,$status)
       This parameter contains the status of a transaction as per the internal database of PayU. PayU’s system has several intermediate status which are used for tracking various activities internal to the system. Hence, this status contains intermediate states of a transaction also - and hence is known as unmappedstatus.
         For example: dropped/bounced/captured/auth/failed/usercancelled/pending
     //-->
-
-    
 </div>
 </body>
 </html>

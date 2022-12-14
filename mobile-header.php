@@ -1,3 +1,90 @@
+<style>
+/* website view */
+.web-nav {
+    background-color: #000;
+}
+.web-nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+}
+.web-nav ul li {
+    padding: 0 10px;
+}
+.web-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+@media(max-width:992px){
+    .web-nav{
+        display: none;
+    }    
+}
+@media (max-width: 992px) {
+         .accordians {
+             padding-top: 100px;
+         }
+         .appointment{
+            padding-top: 100px;
+         }
+     }         
+</style>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark web-nav">
+  <!-- Brand -->
+  <!-- <a class="navbar-brand" href="#">Logo</a> -->
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="my_appointment.php">My Appointment</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="my_subscription.php">My Subscription</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="payment_history.php">Payment History</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="faq.php">FAQ</a>
+    </li>
+
+    
+    <li class="nav-item">
+      <a class="nav-link" href="#">Share this App</a>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        Notification  <span class="badge badge-secondary badge-success">2</span>
+      </a>
+      <div class="dropdown-menu bg-dark">
+        <a class="dropdown-item" href="#">Link 1</a>
+        <a class="dropdown-item" href="#">Link 2</a>
+        <a class="dropdown-item" href="#">Link 3</a>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="logout.php">Logout</a>
+    </li>
+  </ul>
+</nav>
+
+
+ <!-- <nav class="web-nav">
+        <ul>
+            <li><a href="my_appointment.php">My Appointment</a></li>
+            <li><a href="my_subscription.php">My Subscription</a></li>
+            <li><a href="payment_history.php">Payment History</a></li>
+            <li><a href="faq.php">FAQ</a></li>
+            <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </nav> -->
+    <!-- // web view nav -->
+
 <div class="mobile-header">
         <div class="container-fluid theme-container">
             <div class="row align-items-center">
@@ -23,6 +110,8 @@
 
                 </div>
             </div>
+
+
             <div class="menu-sidebar">
                 <div class="close">
                     <i class="ti-close"></i>
@@ -46,6 +135,7 @@
                         <!-- <li><a href="health_partner.php">Health Partners</a></li> -->
                         <li><a href="payment_history.php">Payment History</a></li>
                         <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="#">Share this App</a></li>
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>

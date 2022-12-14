@@ -12,6 +12,6 @@ include('conn.php');
     while($rw = mysqli_fetch_array($query))
     {
      ?>      
- <input type="text" name="package_amount" value="<?php echo $rw['package_amount'];?>"  class="form-control" required readonly/>
+ <input type="text" name="amount" value="<?php echo $rw['package_amount'];?>.00"  class="form-control" required readonly/>
                   
 <?php }} 

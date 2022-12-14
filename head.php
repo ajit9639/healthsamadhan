@@ -7,7 +7,7 @@
     <meta charset="utf-8">
 
     <!-- Sets the title of the page.  Shown in the tab of your browser -->
-    <title>Hospitania</title>
+    <title>Health Samadhan</title>
 
     <!-- Required for Bootstrap's responsive media queries to function -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
