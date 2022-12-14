@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
   $otp = $_POST['input_otp'];
   $otp_check = $_SESSION['otp'];
   if($otp == $otp_check){
-  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE  `phone_number`='$number'  AND `user_status`='active'"));
+  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE  `phone_number`='$number' "));
 
     if($check == '1'){
     $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `phone_number`='$number'"));
@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
   print_r($_SESSION);
   print_r($_POST);
   exit;
-  
+
 echo "<script>window.location.replace('index.php')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
