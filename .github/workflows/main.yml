@@ -11,8 +11,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.1.0
       with:
-        server: pesante.co.in
-        username:  pesante@pesante.co.in
+        server: posigraph.com
+        username:  samashan@posigraph.com
         # password: ${{ secrets.ftp_password }}
-        password: Pesante@
+        password: Samadhan@1234#
         

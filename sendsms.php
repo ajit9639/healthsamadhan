@@ -4,11 +4,11 @@
         $_SESSION['my_num'] = $_POST['phone'];
         
         echo '<script> alert("OTP Send Successfully") </script>';
-        $ch = @mysqli_connect("localhost", "posigraph_health_smadhan", "xC3Eug~T$+ps", "posigraph_health_smadhanDB");
+        include "./conn.php";
         $Mob = 8603310087;
         $otp = rand('100000', '999999');  
         $_SESSION['otp']  = $otp;
-        $link = mysqli_connect("localhost", "posigraph_health_smadhan", "xC3Eug~T$+ps", "posigraph_health_smadhanDB");               
+        // $link = mysqli_connect("localhost", "posigraph_health_smadhan", "xC3Eug~T$+ps", "posigraph_health_smadhanDB");               
         //Your authentication key
         $authKey = "20785AGUsrJlJs4Bf6350c198P15";        
         //Multiple mobiles numbers separated by comma
