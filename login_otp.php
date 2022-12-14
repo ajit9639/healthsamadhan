@@ -1,6 +1,8 @@
 
 <?php 
+
 include 'conn.php'; 
+
 if(isset($_SESSION['email'])){
     echo "<script>
     location.href = 'index.php';
@@ -12,12 +14,10 @@ if(isset($_POST['submit'])){
   $otp = $_POST['input_otp'];
   $otp_check = $_SESSION['otp'];
   if($otp == $otp_check){
-    echo "inserted";
-    
-  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE  `phone_number`='$number' "));
+  $check = mysqli_num_rows(mysqli_query($conn , "SELECT * FROM `signup` WHERE  `phone_number`='$number'  AND `user_status`='active'"));
 
     if($check == '1'){
-    $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `user_doctor` WHERE `phone_number`='$number'"));
+    $getnm = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `phone_number`='$number'"));
     $getnm_my = $getnm['first_name'];
     $getnm_my_email = $getnm['email'];
 
@@ -25,22 +25,14 @@ if(isset($_POST['submit'])){
   $_SESSION['email'] = $getnm_my_email;
   $_SESSION['my_nm'] = $getnm_my;
 
-  echo "<pre>";
-  print_r($_SESSION);
-  print_r($_POST);
-  exit;
-
 echo "<script>window.location.replace('index.php')</script>";
 }else{
 echo "<script>alert('Invalid Login')</script>";
 }
-}else{ 
-    echo '
+}else{?>
     <script>alert("invalid")</script>
-    ';
+<?php 
 }
-}else{
-    
 }
 ?>
 
@@ -116,7 +108,8 @@ body{
                         <div class="col-md-12">
                             <label>Enter OTP</label>
                             <input type="number" class="form-control" placeholder="Enter OTP" id="input_otp" name="input_otp"
-                                 required>                                                          
+                                 required>
+                                                            
                         </div>
                         <!-- // send otp -->
 
