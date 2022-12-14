@@ -104,10 +104,11 @@ echo "<script>alert('Invalid Login')</script>";
                             <label for="email">Email:</label>
                             <input type="email" class="form-control" placeholder="Enter email" name="email">
                         </div>
-                        <div class="col-md-12">
+                        
+                        <!-- <div class="col-md-12">
                             <label for="pwd">Password:</label>
                             <input type="password" class="form-control" placeholder="Enter Password" name="password">
-                        </div>
+                        </div> -->
 
                         <div class="col-md-12 mt-3">
                             Don't have an account ? <a href="register.php" class="">Register Here ?</a> 
