@@ -1,5 +1,28 @@
 <?php
-session_start();
+// session_start();
+
+include "../conn.php";
+// error_reporting(0);
+
+// print_r($_POST);
+// exit;
+
+if(isset($_POST['pay'])){
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $zip = $_POST['zip'];
+    $email = $_POST['email'];
+    $number = $_POST['number'];
+    $address = $_POST['address'];
+    $amount = $_POST['amount'];
+	$udf1 = $_POST['udf1'];
+	$txn_id = rand(999,9999);
+	$product_info = "medicine";
+
+    // $query = "INSERT INTO `student`(`fname`, `lname`, `email`, `phone`, `address`) VALUES('$fname','$lname','$email','$number','$address') ";
+    // $query_succ = mysqli_query($conn , $query);
+}
+
 /*
 Note : It is recommended to fetch all the parameters from your Database rather than posting static values or entering them on the UI.
 
@@ -14,14 +37,16 @@ POST URL: https://secure.payu.in/_payment
 
 //Unique merchant key provided by PayU along with salt. Salt is used for Hash signature 
 //calculation within application and must not be posted or transfered over internet. //-->
-$key="oZ7oo9";
-$salt="UkojH5TS";
+$key="EAaCkB";
+$salt="EIseBcWSUeDGFggSblZOQoaBKIaD9YBF";
 
-$action = 'https://test.payu.in/_payment';
+$_SESSION['salt'] = $salt;
+$action = 'https://secure.payu.in/_payment';
 
-$html='';
+$html = '';
 
 if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
+
 	/* Request Hash
 	----------------
 	For hash calculation, you need to generate a string using certain parameters 
@@ -43,38 +68,33 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 	hash=sha512(key|txnid|amount|productinfo|firstname|email|||||||||||SALT)
 	
 	In present kit and available PayU plugins UDF5 is used. So the order is -	
-	hash=sha512(key|txnid|amount|productinfo|firstname|email|||||udf5||||||SALT)
+	hash = sha512(key|txnid|amount|productinfo|firstname|email|||||udf5||||||SALT)
 	
 	*/
 	//generate hash with mandatory parameters and udf5
-	// echo "<pre>";
-	// print_r($_POST);
-	// exit;
+	// $hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$lname.'|'.$zip.'|'.$number.'|'.$address.'|'.$city.'|'.$state.'|'.$country.'|'.$email.'||||||'.$salt);
 
-	$hash=hash('sha512', $key.'|'.$_POST['txnid'].'|'.$_POST['amount'].'|'.$_POST['productinfo'].'|'.$_POST['firstname'].'|'.$_POST['email'].'|||||'.$_POST['udf5'].'||||||'.$salt);
+	$hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$email.'|'.$udf1.'||||||||||'.$salt);
 		
 	$_SESSION['salt'] = $salt; //save salt in session to use during Hash validation in response
 	
 	$html = '<form action="'.$action.'" id="payment_form_submit" method="post">
-			<input type="hidden" id="udf5" name="udf5" value="'.$_POST['udf5'].'" />
+			
 			<input type="hidden" id="surl" name="surl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="furl" name="furl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="curl" name="curl" value="'.getCallbackUrl().'" />
 			<input type="hidden" id="key" name="key" value="'.$key.'" />
-			<input type="hidden" id="txnid" name="txnid" value="'.$_POST['txnid'].'" />
-			<input type="hidden" id="amount" name="amount" value="'.$_POST['amount'].'" />
-			<input type="hidden" id="productinfo" name="productinfo" value="'.$_POST['productinfo'].'" />
-			<input type="hidden" id="firstname" name="firstname" value="'.$_POST['firstname'].'" />
-			<input type="hidden" id="Lastname" name="Lastname" value="'.$_POST['Lastname'].'" />
-			<input type="hidden" id="Zipcode" name="Zipcode" value="'.$_POST['Zipcode'].'" />
-			<input type="hidden" id="email" name="email" value="'.$_POST['email'].'" />
-			<input type="hidden" id="phone" name="phone" value="'.$_POST['phone'].'" />
-			<input type="hidden" id="address1" name="address1" value="'.$_POST['address1'].'" />
-			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />
-			<input type="hidden" id="city" name="city" value="'.$_POST['city'].'" />
-			<input type="hidden" id="state" name="state" value="'.$_POST['state'].'" />
-			<input type="hidden" id="country" name="country" value="'.$_POST['country'].'" />
-			<input type="hidden" id="Pg" name="Pg" value="'.$_POST['Pg'].'" />
+			<input type="hidden" id="txnid" name="txnid" value="'.$txn_id.'" />
+			<input type="hidden" id="amount" name="amount" value="'.$amount.'" />
+			<input type="hidden" id="productinfo" name="productinfo" value="'.$product_info.'" />
+			<input type="hidden" id="firstname" name="firstname" value="'.$fname.'" />
+			<input type="hidden" id="Lastname" name="Lastname" value="'.$lname.'" />
+			<input type="hidden" id="Zipcode" name="Zipcode" value="'.$zip.'" />
+			<input type="hidden" id="email" name="email" value="'.$email.'" />
+			<input type="hidden" id="phone" name="phone" value="'.$number.'" />
+			<input type="hidden" id="address1" name="address1" value="'.$address.'" />
+			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />			
+			<input type="hidden" id="udf1" name="udf1" value="'.$_POST['udf1'].'" />
 			<input type="hidden" id="hash" name="hash" value="'.$hash.'" />
 			</form>
 			<script type="text/javascript"><!--
@@ -202,21 +222,7 @@ function getCallbackUrl()
 				<input type="text" id="address2" name="address2" placeholder="Address2" value="" /></span>
 			</div>
     
-			<div class="dv">
-				<span class="text"><label>City:</label></span>
-				<span>						
-				<input type="text" id="city" name="city" placeholder="City" value="" /></span>
-			</div>
-    
-			<div class="dv">
-				<span class="text"><label>State:</label></span>
-				<span><input type="text" id="state" name="state" placeholder="State" value="" /></span>
-			</div>
-    
-			<div class="dv">
-				<span class="text"><label>Country:</label></span>
-				<span><input type="text" id="country" name="country" placeholder="Country" value="" /></span>
-			</div>
+			
     
 			<div class="dv">
 				<span class="text"><label>PG:</label></span>
@@ -241,12 +247,12 @@ function getCallbackUrl()
 	so should not be passed over internet.//-->
 	<script type="text/javascript">		
 		
-		function frmsubmit()
-		{
-			document.getElementById("payment_form").submit();	
-			return true;
-		}
-		//-->
+		// function frmsubmit()
+		// {
+		// 	document.getElementById("payment_form").submit();	
+		// 	return true;
+		// }
+	
 	</script>
 	
 </body>

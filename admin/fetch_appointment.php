@@ -34,17 +34,27 @@ if(mysqli_num_rows($result) > 0)
      <th>Time</th>
      <th>Problem</th>
      <th>Email</th>
+     <th> Status</th>
+     <th> Date</th>
+     <th> Time</th>
+     <th>Action</th>
      
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
  {
+   $id = $row['id'];
   $output .= '
    <tr>
     <td>'.$row["date"].'</td>
     <td>'.$row["time"].'</td>
     <td>'.$row["problem"].'</td>
     <td>'.$row["ref_id"].'</td>    
+
+    <td>'.$row["app_status"].'</td>    
+    <td>'.$row["app_date"].'</td>    
+    <td>'.$row["app_time"].'</td>    
+    <td><a href="update_appointment.php?id='.$id.'" class="btn btn-success"> Change Status</a>'.'</td>    
    </tr>
   ';
  }

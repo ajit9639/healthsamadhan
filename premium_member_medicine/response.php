@@ -1,10 +1,19 @@
 <?php
 session_start();
+include "../conn.php";
+// error_reporting(0);
 /*Note : After completing transaction process it is recommended to make an enquiry call with PayU to validate the response received and then save the response to DB or display it on UI*/
+
+// echo "<pre>";
+// print_r($_POST);
+// print_r($_SESSION);
+// exit;
+
+// $rand = $_SESSION['[random]'];
 
 $postdata = $_POST;
 $msg = '';
-$salt = $_SESSION['salt']; //Salt already saved in session during initial request.
+$salt = 'UkojH5TS'; //Salt already saved in session during initial request.
 
 /* Response received from Payment Gateway at this page.
 
@@ -23,22 +32,57 @@ hash = sha512(additionalCharges|SALT|status||||||udf5|||||email|firstname|produc
 */
 if (isset($postdata ['key'])) {
 	$key				=   $postdata['key'];
-    $salt   = 'jwmpm1SAeIRVcsbyPsAQCgpgor1Dnns1';
+    $salt               =   'UkojH5TS';
+    
+    
+    
+    
+    
+
 	$txnid 				= 	$postdata['txnid'];
     $amount      		= 	$postdata['amount'];
 	$productInfo  		= 	$postdata['productinfo'];
+	
 	$firstname    		= 	$postdata['firstname'];
+	$lastname    		= 	$postdata['lastname'];
 	$email        		=	$postdata['email'];
-	$udf5				=   $postdata['udf5'];	
+    $phone              =   $postdata['phone'];
+    $address1           =   $postdata['address1'];
+    
+    $zipcode            =   $postdata['zipcode'] ;
+    $random             =  $postdata['udf1'];
+
 	$status				= 	$postdata['status'];
 	$resphash			= 	$postdata['hash'];
 	//Calculate response hash to verify	
-	$keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|||||'.$udf5.'|||||';
+	// $keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|||||'.$udf5.'|||||';
+	$keyString 	  		=  	$key.'|'.$txnid.'|'.$amount.'|'.$productInfo.'|'.$firstname.'|'.$email.'|'.$phone.'|'.$address1.'|'.$zipcode.'|||||';
 	$keyArray 	  		= 	explode("|",$keyString);
 	$reverseKeyArray 	= 	array_reverse($keyArray);
 	$reverseKeyString	=	implode("|",$reverseKeyArray);
 	$CalcHashString 	= 	strtolower(hash('sha512', $salt.'|'.$status.'|'.$reverseKeyString)); //hash without additionalcharges
 	
+    $query = "UPDATE `student` SET `txn_id`='$txnid',`fname`='$firstname',`lname`='$lastname',`email`='$email',`phone`='$phone',`address`='$address1',`zip`='$zipcode',`status`='$status' WHERE `random`='$random'";
+    
+    
+    $result = mysqli_query($conn,$query);
+    if($result){
+
+echo "<script>        
+  alert('success');
+  const myTimeout = setTimeout(myGreeting, 800);
+  function myGreeting() {
+  location.replace('../index.php');
+  }
+  </script>";
+  
+}else{
+        echo "<script>
+        // alert('failure');
+        location.replace('../index.php');
+        </script>";
+    }
+
 	//check for presence of additionalcharges parameter in response.
 	$additionalCharges  = 	"";
 	
@@ -53,7 +97,9 @@ if (isset($postdata ['key'])) {
 		//Do success order processing here...
 		//Additional step - Use verify payment api to double check payment.
 		if(verifyPayment($key,$salt,$txnid,$status))
+                           
 			$msg = "Transaction Successful, Hash Verified...Payment Verified...";
+           
 		else
 			$msg = "Transaction Successful, Hash Verified...Payment Verification failed...";
 	}
@@ -77,10 +123,10 @@ function verifyPayment($key,$salt,$txnid,$status)
 	    
     $qs= http_build_query($r);
 	//for production
-    $wsUrl = "https://info.payu.in/merchant/postservice.php?form=2";
+    // $wsUrl = "https://info.payu.in/merchant/postservice.php?form=2";
    
 	//for test
-	// $wsUrl = "https://test.payu.in/merchant/postservice.php?form=2";
+	$wsUrl = "https://test.payu.in/merchant/postservice.php?form=2";
 	
 	try 
 	{		

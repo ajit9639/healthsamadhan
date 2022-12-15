@@ -21865,7 +21865,8 @@ code {
 
 .card .card-title {
     color: #001737;
-    margin-bottom: 1.5rem;
+    margin-top: 32px;
+    /* margin-bottom: 1.5rem; */
     text-transform: capitalize;
     font-size: 1.125rem;
 }

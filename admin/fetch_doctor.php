@@ -39,6 +39,7 @@ if(mysqli_num_rows($result) > 0)
      <th>Year Of Exp</th>
      <th>City</th>
      <th>Address</th>
+     <th>Photo</th>
     </tr>
  ';
  while($row = mysqli_fetch_array($result))
@@ -52,6 +53,7 @@ if(mysqli_num_rows($result) > 0)
     <td>'.$row["gender"].'</td>
     <td>'.$row["year_of_exp"].'</td>
     <td>'.$row["city"].'</td>
+    <td>'.$row["address"].'</td>
     <td>'.$row["address"].'</td>
    </tr>
   ';

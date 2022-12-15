@@ -73,6 +73,12 @@ if (isset($postdata ['key'])) {
         
         // echo "UPDATE `signup` SET `tranx_id`='$txnid',`tranx_status`='$status',`tranx_date`='$addedon' WHERE `tranx_id`='$txnid'";exit;
 
+        // thankyou mail
+        $sub = "Health Samadhan";
+        $mes = "Your package has been purchased successfully";
+        mail($email, $sub, $mes);
+        // thankyou mail
+
         $upd = mysqli_query($conn , "UPDATE `signup` SET `tranx_id`='$txnid',`tranx_status`='$status',`tranx_date`='$addedon' WHERE `rand_id`='$txnid'");
         
                 echo "<script>        

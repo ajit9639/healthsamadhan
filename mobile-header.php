@@ -50,6 +50,10 @@
       <a class="nav-link" href="faq.php">FAQ</a>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link" href="medicines.php">Buy Medicine</a>
+    </li>
+    
     
     <li class="nav-item">
       <a class="nav-link" href="#">Share this App</a>
@@ -58,7 +62,7 @@
     <!-- Dropdown -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Notification  <span class="badge badge-secondary badge-success">2</span>
+      <i class="fa fa-bell"></i>  <span class="badge badge-secondary badge-success">2</span>
       </a>
       <div class="dropdown-menu bg-dark">
         <a class="dropdown-item" href="#">Link 1</a>
@@ -130,12 +134,13 @@
                         <!-- <li><a href="#">Your Last Rx</a></li> -->
                         <li><a href="my_appointment.php">My Appointment</a></li>
                         <li><a href="my_subscription.php">My Subscriptions</a></li>
-                        <!-- <li><a href="#">Program Adherence</a></li> -->
-                        <!-- <li><a href="#">Choose Your Program</a></li> -->
-                        <!-- <li><a href="health_partner.php">Health Partners</a></li> -->
                         <li><a href="payment_history.php">Payment History</a></li>
                         <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="medicines.php">Buy Medicine</a></li>
                         <li><a href="#">Share this App</a></li>
+                        <li><a href="#"><i class="fa fa-bell"></i>  <span class="badge badge-secondary badge-success">2</span></a></li>
+                        <!-- <li><a href="#">Choose Your Program</a></li> -->
+                        <!-- <li><a href="health_partner.php">Health Partners</a></li> -->
                         <li><a href="logout.php">Logout</a></li>
                     </ul>
                 </div>

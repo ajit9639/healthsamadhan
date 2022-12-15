@@ -15,13 +15,13 @@
     $address = $_POST['address'];
     $pass = $_POST['password'];
     $password = md5($pass);
-    $image_data = "photo";
+    // $image_data = "photo";
 
 
-    // $image = $_FILES['image'];
-    // $image_name = $image['name'];
-    // $image_tmp_name = $image['tmp_name'];
-    // $image_data = addslashes(file_get_contents($image_tmp_name));
+    $image = $_FILES['image'];
+    $image_name = $image['name'];
+    $image_tmp_name = $image['tmp_name'];
+    $image_data = addslashes(file_get_contents($image_tmp_name));
 
     
     $check = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `doctor_registration`  WHERE `email`='$email'"));
@@ -125,17 +125,20 @@
                                 required>                            
                         </div>   
                         
-                        <!-- <div class="col-md-4">
-                            <label>Image</label>
-                            <input type="file" class="form-control" name="image" accept="image/*"
-                                >                            
-                        </div>  -->
+                       
 
                         <div class="col-md-4">
                             <label>Password</label>
                             <input type="password" class="form-control" placeholder="Enter Password" name="password"
                                 required  autocomplete="off">                            
                         </div> 
+
+                        <div class="col-md-4">
+                            <label>Image</label>
+                            <input type="file" class="form-control" name="image" accept="image/*" >                            
+                        </div> 
+
+
                       
                         <div class="col-md-12">
                             <label>Address</label>

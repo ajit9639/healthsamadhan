@@ -1,4 +1,31 @@
-<?php include "header.php";?>
+<?php include "header.php";
+
+
+include "./php-framwork/methods/pagination.php";
+include "./php-framwork/methods/search_data.php";
+
+// pagination
+$condition1 = 1;
+$limit = 10;
+if (isset($_GET["page"])) {
+    $page  = $_GET["page"];
+} else {
+    $page = 1;
+    unset($_SESSION['condition']);
+};
+$start_from = ($page - 1) * $limit;
+$s_no = $start_from + 1;
+$condition = '1 LIMIT ' . $start_from . ',' . $limit;
+if (isset($_SESSION['condition'])) {
+    if ($_SESSION['condition'] != '') {
+        $condition = $_SESSION['condition'] . '  LIMIT ' . $start_from . ',' . $limit;
+        $condition1 = $_SESSION['condition'];
+    } else {
+        $condition = '1 LIMIT ' . $start_from . ',' . $limit;
+    }
+}
+// pagination end
+?>
 
 <div class="container-fluid page-body-wrapper">
 
@@ -58,6 +85,7 @@
                             </script>
                            <?php
 
-                include "footer.php";
+paginate('appointment',$limit,'view_appointment.php');
+include "footer.php";
 
               ?>
