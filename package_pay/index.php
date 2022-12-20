@@ -31,7 +31,8 @@
     $lname = $_POST['lastname'];
     $email = $_POST['email'];
     $number = $_POST['phone'];
-	$password = $_POST['password'];
+	$password = $_POST['udf1'];
+	$udf1 = $_POST['udf1'];
 	$gender = $_POST['gender'];
     $rand_id = $_POST['txnid'];
     $check = mysqli_fetch_assoc(mysqli_query($conn , "SELECT * FROM `signup` WHERE `email`='$email'"));
@@ -111,7 +112,7 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 	//generate hash with mandatory parameters and udf5
 	// $hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$lname.'|'.$zip.'|'.$number.'|'.$address.'|'.$city.'|'.$state.'|'.$country.'|'.$email.'||||||'.$salt);
 
-	$hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$email.'|||||||||||'.$salt);
+	$hash = hash('sha512', $key.'|'.$txn_id.'|'.$amount.'|'.$product_info.'|'.$fname.'|'.$email.'|'.$udf1.'||||||||||'.$salt);
 		
 	$_SESSION['salt'] = $salt; //save salt in session to use during Hash validation in response
 	
@@ -130,6 +131,7 @@ if(strcasecmp($_SERVER['REQUEST_METHOD'], 'POST') == 0){
 			<input type="hidden" id="phone" name="phone" value="'.$number.'" />
 			<input type="hidden" id="address1" name="address1" value="'.$address.'" />
 			<input type="hidden" id="address2" name="address2" value="'.(isset($_POST['address2'])? $_POST['address2'] : '').'" />						
+			<input type="hidden" id="udf1" name="udf1" value="'.$_POST['udf1'].'" />
 			<input type="hidden" id="hash" name="hash" value="'.$hash.'" />
 			</form>
 			<script type="text/javascript">

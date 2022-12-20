@@ -59,7 +59,7 @@ if (isset($postdata ['key'])) {
     $first_name = $_POST['firstname'];
     $last_name = $_POST['lastname'];
     $email = $_POST['email'];
-    $password = 123456;
+    $password = $_POST['udf1'];
     $image_data = 'img';
     
         $cont_dr = mysqli_fetch_assoc(mysqli_query($conn , "SELECT COUNT('id') as `cid` FROM `user_doctor`"));

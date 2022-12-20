@@ -8,6 +8,8 @@
         if(!empty($message)){
             $sql = mysqli_query($conn, "INSERT INTO messages_doctor (incoming_msg_id, outgoing_msg_id, msg)
                                         VALUES ({$incoming_id}, {$outgoing_id}, '{$message}')") or die();
+            $send_notification_doctor = mysqli_query($conn , "INSERT INTO `notification_doctor`(`from_id`, `to_id`, `message`) VALUES({$outgoing_id},{$incoming_id},'{$message}')");
+                                         
         }
     }else{
         header("location: ../login.php");

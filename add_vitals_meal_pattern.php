@@ -93,10 +93,10 @@ if (isset($_POST['submit'])) {
     $ins3 = mysqli_query($conn, "INSERT INTO `messages_healthexpert`(`incoming_msg_id`, `outgoing_msg_id`, `msg`) VALUES ('$doc_health','$pac_health','$tt')");
 
 
-    // notification
-    $send_totification_doctor = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$gt_user_id','$getmyname')");
-    $send_totification_diet = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$gt_diet','$getmyname')");
-    $send_totification_health = mysqli_query($conn , "INSERT INTO `notification`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$gt_health','$getmyname')");
+     // notification
+     $send_totification_doctor = mysqli_query($conn , "INSERT INTO `notification_doctor`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$doc','$getmyname')");
+     $send_totification_diet = mysqli_query($conn , "INSERT INTO `notification_dietition`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$doc_diet','$getmyname')");
+     $send_totification_health = mysqli_query($conn , "INSERT INTO `notification_healthexpert`(`from_id`, `to_id`, `message`) VALUES('$getmyid','$doc_health','$getmyname')");      
 
 
     if ($ins1) {

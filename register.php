@@ -89,14 +89,9 @@ include 'conn.php';
                                 pattern="[789][0-9]{9}"  required>
                                 </div>
                                 <div>
-                                <button class="btn btn-success" name="check_otp"  onclick="create()" type="button">Send OTP
-                                
-                               
+                                <button class="btn btn-success" name="check_otp"  onclick="create()" type="button">Send OTP                                                               
                                   <span style="display:none" id="spin" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                  <span class="sr-only">Loading...</span>
-                               
-
-
+                                  <span class="sr-only">Loading...</span>                               
                                 </button>
                                 </div>
                         </div></div>
@@ -112,7 +107,7 @@ include 'conn.php';
 
                         <div class="col-md-4">
                             <label>password </label>
-                            <input type="password" class="form-control" placeholder="Enter Password" name="password"
+                            <input type="password" class="form-control" placeholder="Enter Password" name="udf1"
                                 required>
                         </div>
 

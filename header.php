@@ -108,20 +108,35 @@ $val = $_SESSION['email'];
 $query = mysqli_query($conn ,  "SELECT * FROM `signup` WHERE `email` = '$val'");
 $row = mysqli_fetch_assoc($query);
 
-// $user_query = mysqli_query($conn,$queryss);
-// $user_detail = mysqli_fetch_assoc($query);
-
 $user_name = $row['first_name'];
 $user_email = $row['email'];
 $user_phone = $row['phone_number'];
 $user_address = $row['address'];
 
-
-
-
 $pack_id = $row['package_name'];
 $query2 = mysqli_query($conn ,  "SELECT * FROM `package` WHERE `id` = '$pack_id'");
 $row2 = mysqli_fetch_assoc($query2);
+
+
+
+// give 1 month before alert
+// $purchase_date = $row2['tranx_date'];    
+// $month  = 2;
+// $before = $month-1;
+// $days = 30 * $month ;
+// $curr_date = date('Y-m-d', time());
+// $before_date=date("Y-m-d",strtotime("+$before month",strtotime(date("Y-m-d",strtotime($purchase_date) ) )));
+// if($before_date == $curr_date)
+// { 
+//     echo '<h1> you have left one month for expiration of your package.</h1>';
+// }
+// else
+// {
+//     echo"<h1>You have total $days days</h1>";
+// }
+// give 1 month before alert //
+
+
 
 $purchase_date = $row['tranx_date']; 
 $month  = $row2['package_duration'];

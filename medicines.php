@@ -1,6 +1,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- select search -->
+    <!-- <script src="./select/select.js"></script>
+    <link href="./select/select.css" rel="stylesheet">
+    <script>
+    $(function() {
+        $("select").select2();
+    });
+    </script> -->
+    <!-- select search -->
+
 <?php 
 include "aside_structure.php";
+
 
 if(isset($_GET['id']))
 {
@@ -158,11 +170,7 @@ if(isset($_GET['id']))
     }
     </script>
     
-    <script>
-    $(function() {
-        $("select").select2();
-    });
-    </script>
+   
 </body>
 <?php include 'footer.php' ?>
 </body>

@@ -8,7 +8,7 @@
 <?php include "header.php"; ?>
 <body>
   <div class="wrapper">
-  <img src="../assets/img/logo.png" alt=""><hr>
+  <img src="../assets/img/logo.png" alt="1"><hr>
     <section class="users">
       <header>
         <div class="content">
@@ -20,7 +20,8 @@
             }
           ?>
           <!-- <img src="php/images/<?php echo $row['img']; ?>" alt=""> -->
-          <img src="./image/user.png" alt="">
+          <!-- <img src="./image/user.png" alt="22"> -->
+          <?php echo '<img src="data:image/jpeg;base64,'.base64_encode($row['img']) .'" />'; ?>
           <div class="details">
             <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
             <p><?php echo $row['status']; ?></p>
