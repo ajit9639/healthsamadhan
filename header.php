@@ -117,8 +117,6 @@ $pack_id = $row['package_name'];
 $query2 = mysqli_query($conn ,  "SELECT * FROM `package` WHERE `id` = '$pack_id'");
 $row2 = mysqli_fetch_assoc($query2);
 
-
-
 // give 1 month before alert
 // $purchase_date = $row2['tranx_date'];    
 // $month  = 2;
@@ -135,7 +133,6 @@ $row2 = mysqli_fetch_assoc($query2);
 //     echo"<h1>You have total $days days</h1>";
 // }
 // give 1 month before alert //
-
 
 
 $purchase_date = $row['tranx_date']; 
