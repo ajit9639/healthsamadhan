@@ -1,16 +1,10 @@
 <?php include 'conn.php'; ?>
-
 <!doctype html>
 <html>
-
 <?php include 'head.php' ?>
-
 <body>
-
     <?php include 'header.php' ?>
-
     <?php include 'mobile-header.php' ?>
-
     <main>
 
         <?php    $idd = $_GET['id']; ?>
